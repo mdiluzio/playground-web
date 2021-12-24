@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Menu</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+        <h1>Menu</h1>
+        <nav>
+            <ul style="list-style: none">
+                <li class="nav-menu-item">
+                    <a role="button" id="btn-categorias" aria-expanded="false" href="#pepe" class="nav-menu-categories-link"
+                        data-js="nav-menu-categories-trigger" rel="nofollow">Categorías</a>
+                   
+                    <ul style="list-style: none" id="categorias" aria-label="Submenú categorías">
+                        <li><a href="https://www.mercadolibre.com.ar/vehiculos/#menu=categories">Vehículos</a>
+                        </li>
+                        <li><a href="https://www.mercadolibre.com.ar/inmuebles/#menu=categories">Inmuebles</a>
+                        </li>
+
+                        <li><a href="#pepe" role="button" id="btn-tecnologia" aria-expanded="false">Tecnología</a>
+                            <ul style="list-style: none" id="cat-tecnologia" data-js="nav-categs-detail"
+                                aria-label="Submenú tecnología">
+                                <li class="nav-categs-detail__title">
+                                    <a href="https://www.mercadolibre.com.ar/c/celulares-y-telefonos#menu=categories">Celulares
+                                        y Teléfonos</a>
+                                    <ul style="list-style: none" class="nav-categs-detail__categ-list">
+                                        <li><a href="https://celulares.mercadolibre.com.ar/#menu=categories">Celulares
+                                                y
+                                                Smartphones</a></li>
+                                        <li><a href="https://celulares.mercadolibre.com.ar/accesorios/#menu=categories">Accesorios
+                                                para Celulares</a></li>
+                                    </ul>
+                                </li>
+        
+                                <li>
+                                    <a href="https://www.mercadolibre.com.ar/c/computacion#menu=categories">Computación</a>
+        
+                                    <ul style="list-style: none" class="nav-categs-detail__categ-list">
+                                        <li><a href="https://computacion.mercadolibre.com.ar/componentes-pc/#menu=categories">Componentes
+                                                de PC</a></li>
+                                        <li><a
+                                                href="https://computacion.mercadolibre.com.ar/impresion/#menu=categories">Impresión</a>
+                                        </li>
+                                        <li><a
+                                                href="https://computacion.mercadolibre.com.ar/tablets-accesorios/#menu=categories">Tablets
+                                                y Accesorios</a></li>
+                                        <li><a
+                                                href="https://computacion.mercadolibre.com.ar/pc-escritorio/pc/#menu=categories">PC</a>
+                                        </li>
+                                    </ul>
+                                </li>
+        
+                                <li>
+                                    <a href="https://www.mercadolibre.com.ar/c/camaras-y-accesorios#menu=categories">Cámaras
+                                        y Accesorios</a>
+        
+                                    <ul style="list-style: none" class="nav-categs-detail__categ-list">
+                                        <li><a
+                                                href="https://camaras-digitales.mercadolibre.com.ar/camaras/digitales/#menu=categories">Cámaras
+                                                Digitales</a></li>
+                                        <li><a href="https://camaras-digitales.mercadolibre.com.ar/accesorios/#menu=categories">Accesorios
+                                                para Cámaras</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/hogar-muebles-y-jardin#menu=categories">Hogar
+                                y Muebles</a></li>
+                        <li><a
+                                href="https://www.mercadolibre.com.ar/c/electrodomesticos-y-aires-ac#menu=categories">Electrodomésticos</a>
+                        </li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/herramientas#menu=categories">Herramientas</a>
+                        </li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/construccion#menu=categories">Construcción</a>
+                        </li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/deportes-y-fitness#menu=categories">Deportes
+                                y Fitness</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/accesorios-para-vehiculos#menu=categories">Accesorios
+                                para Vehículos</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/ropa-y-accesorios#menu=categories">Moda</a>
+                        </li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/juegos-y-juguetes#menu=categories">Juegos
+                                y
+                                Juguetes</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/bebes#menu=categories">Bebés</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/belleza-y-cuidado-personal#menu=categories">Belleza
+                                y Cuidado Personal</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/salud-y-equipamiento-medico#menu=categories">Salud
+                                y Equipamiento Médico</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/industrias-y-oficinas#menu=categories">Industrias
+                                y Oficinas</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/agro#menu=categories">Agro</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/productos-sustentables#menu=categories">Productos
+                                Sustentables</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/c/servicios#menu=categories">Servicios</a>
+                        </li>
+                        <li><a href="https://www.mercadolibre.com.ar/tiendas-oficiales#menu=categories">Tiendas
+                                oficiales</a></li>
+                        <li><a href="https://www.mercadolibre.com.ar/categorias#menu=categories">Ver más
+                                categorías</a></li>
+                    </ul>
+                </li>
+                <li class="nav-menu-item"><a id="fuera" href="https://www.mercadolibre.com.ar/ofertas#nav-header"
+                        class="nav-menu-item-link" rel="nofollow">Ofertas</a></li>
+                <li class="nav-menu-item"><a href="https://www.mercadolibre.com.ar/gz/home/navigation#nav-header"
+                        class="nav-menu-item-link" rel="nofollow">Historial</a></li>
+                <li class="nav-menu-item"><a href="https://www.mercadolibre.com.ar/ofertas/supermercadolibre#nav-header"
+                        class="nav-menu-item-link" rel="nofollow">Supermercado</a></li>
+                <li class="nav-menu-item"><a href="https://www.mercadolibre.com.ar/c/ropa-y-accesorios#nav-header"
+                        class="nav-menu-item-link" rel="nofollow">Moda</a></li>
+                <li class="nav-menu-item"><a href="https://www.mercadolibre.com.ar/publicar#nav-header"
+                        class="nav-menu-item-link" rel="nofollow">Vender</a></li>
+                <li class="nav-menu-item"><a href="https://www.mercadolibre.com.ar/ayuda#nav-header"
+                        class="nav-menu-item-link" rel="nofollow">Ayuda</a></li>
+            </ul>
+        </nav>
+
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ally.js/1.4.1/ally.min.js"></script>
+    <script>
+        console.log('loaded ally.js in version', ally.version);
+        console.log('focusable elements', ally.query.focusable());
+    </script>
+
+</body>
+
+</html>

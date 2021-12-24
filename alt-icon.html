@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>icon alt</title>
+    <meta charset="utf-8">
+
+    <style>
+        .sr-only {
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+        }
+
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/c33005f6ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Enlaces e iconos</h1>
+
+        <h2 class="example">Alt text img</h2>
+        <a href="#pepe"><img src="https://img.icons8.com/color/50/000000/google-logo.png"
+                alt="Descripción de la imagen" /></a>
+
+        <h2 class="example">icon role img y aria-label</h2>
+        <a href="#pepe">
+            <i role="img" aria-label="Descripción de la imagen" class="fa-solid fa-plane"></i>
+        </a>
+
+        <h2 class="example">icon con sr-only</h2>
+        <a href="#pepe">
+            <i class="fa-solid fa-plane" aria-hidden="true"></i>
+            <span class="sr-only-meli">Descripción de la imagen</span>
+        </a>
+
+        <h2 class="example">enlace con aria-label</h2>
+        <a href="#pepe" aria-label="Descripción de la imagen">
+            <i class="fa-solid fa-plane"></i>
+        </a>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

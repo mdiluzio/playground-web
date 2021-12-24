@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Detalles</title>
+    <meta charset="utf-8">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+
+    <style>
+        ul {
+            list-style: none;
+        }
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <main>
+        <h1>Detalles</h1>
+
+        <h2>aria-current</h2>
+
+        <ul aria-label="Seleccionar color">
+            <li>
+                <a href="detalles.html?negro"
+                    modifier="link" id="negro"
+                    class="ui-pdp-thumbnail ui-pdp-variations--thumbnail ui-pdp-thumbnail--NONE">
+                    <div class="ui-pdp-thumbnail__picture ui-pdp-thumbnail__picture--LARGE"><img decoding="async"
+                            src="https://http2.mlstatic.com/D_Q_NP_947539-MLA46888184586_072021-R.webp"
+                            class="ui-pdp-image" alt="Negro"
+                            srcset="https://http2.mlstatic.com/D_Q_NP_2X_947539-MLA46888184586_072021-R.webp 2x"></div>
+                </a>
+            </li>
+            <li>
+                <a id="blanco" href="detalles.html?blanco"
+                    modifier="link" class="ui-pdp-thumbnail ui-pdp-variations--thumbnail ui-pdp-thumbnail--NONE">
+                    <div class="ui-pdp-thumbnail__picture ui-pdp-thumbnail__picture--LARGE"><img decoding="async"
+                            src="https://http2.mlstatic.com/D_Q_NP_679558-MLA46888210089_072021-R.webp"
+                            class="ui-pdp-image" alt="Blanco"
+                            srcset="https://http2.mlstatic.com/D_Q_NP_2X_679558-MLA46888210089_072021-R.webp 2x">
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+
+        <script>
+
+            function load() {
+                if (getAllUrlParams().blanco) {
+                    document.querySelector('#blanco').setAttribute('aria-current', "true");
+                    ///$('#switch').focus();
+                    console.log(getAllUrlParams().blanco);
+                };
+                if (getAllUrlParams().negro) {
+                    document.querySelector('#negro').setAttribute('aria-current', "true");
+                    ///$('#switch').focus();
+                    console.log(getAllUrlParams().negro);
+                };
+
+            };
+
+            window.onload = load;
+
+            function getAllUrlParams(url) {
+
+                // get query string from url (optional) or window
+                var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+
+                // we'll store the parameters here
+                var obj = {};
+
+                // if query string exists
+                if (queryString) {
+
+                    // stuff after # is not part of query string, so get rid of it
+                    queryString = queryString.split('#')[0];
+
+                    // split our query string into its component parts
+                    var arr = queryString.split('&');
+
+                    for (var i = 0; i < arr.length; i++) {
+                        // separate the keys and the values
+                        var a = arr[i].split('=');
+
+                        // set parameter name and value (use 'true' if empty)
+                        var paramName = a[0];
+                        var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
+
+                        // (optional) keep case consistent
+                        paramName = paramName.toLowerCase();
+                        if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
+
+                        // if the paramName ends with square brackets, e.g. colors[] or colors[2]
+                        if (paramName.match(/\[(\d+)?\]$/)) {
+
+                            // create key if it doesn't exist
+                            var key = paramName.replace(/\[(\d+)?\]/, '');
+                            if (!obj[key]) obj[key] = [];
+
+                            // if it's an indexed array e.g. colors[2]
+                            if (paramName.match(/\[\d+\]$/)) {
+                                // get the index value and add the entry at the appropriate position
+                                var index = /\[(\d+)\]/.exec(paramName)[1];
+                                obj[key][index] = paramValue;
+                            } else {
+                                // otherwise add the value to the end of the array
+                                obj[key].push(paramValue);
+                            }
+                        } else {
+                            // we're dealing with a string
+                            if (!obj[paramName]) {
+                                // if it doesn't exist, create property
+                                obj[paramName] = paramValue;
+                            } else if (obj[paramName] && typeof obj[paramName] === 'string') {
+                                // if property does exist and it's a string, convert it to an array
+                                obj[paramName] = [obj[paramName]];
+                                obj[paramName].push(paramValue);
+                            } else {
+                                // otherwise add the property
+                                obj[paramName].push(paramValue);
+                            }
+                        }
+                    }
+                }
+
+                return obj;
+            }
+
+
+        </script>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

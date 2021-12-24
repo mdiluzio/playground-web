@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Comprar ahora</title>
+    <meta charset="utf-8">
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Comprar ahora</h1>
+    </header>
+
+    <main id="contenido">
+
+
+
+        <h2>andes-visually-hidden</h2>
+        <button aria-disabled="true" class="andes-button__content"> <span class="andes-button__content">Comprar
+                ahora<span class="andes-visually-hidden"> elegí los detalles del producto primero.</span></span>
+        </button>
+
+        <button aria-disabled="true" class="andes-button__content"> <span class="andes-button__content">Comprar
+                ahora<div class="andes-visually-hidden"> elegí los detalles del producto primero.</div></span>
+        </button>
+
+        <h2>aria-describedby</h2>
+
+        <button class="andes-button__content" aria-describedby="tooltip" aria-disabled="true"> Comprar ahora</button>
+        <span id="tooltip" class="andes-visually-hidden"> elegí los detalles del producto primero.</span>
+      
+
+
+    </main>
+
+
+    <footer></footer>
+</body>
+
+</html>

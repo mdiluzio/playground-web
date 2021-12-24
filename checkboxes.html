@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Checkboxes no nativos</title>
+    <meta charset="utf-8">
+
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Checkboxes no nativos</h1>
+    </header>
+
+    <main id="contenido">
+
+        <h2 id="lista">Op 1 Seleccione sus días</h2>
+        <div role="group" aria-labelledby="lista">
+            <ul>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Lunes</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="true" tabindex="0">Martes</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Miércoles</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Jueves</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Viernes</div>
+                </li>
+            </ul>
+        </div>
+        <h2 id="lista2">Op 2 Seleccione sus días</h2>
+        <ul aria-labelledby="lista2">
+            <li><span role="checkbox" aria-checked="false" tabindex="0">Lunes</span></li>
+            <li><span role="checkbox" aria-checked="true" tabindex="0">Martes</span></li>
+            <li><span role="checkbox" aria-checked="false" tabindex="0">Miércoles</span></li>
+            <li><span role="checkbox" aria-checked="false" tabindex="0">Jueves</span></li>
+            <li><span role="checkbox" aria-checked="false" tabindex="0">Viernes</span></li>
+        </ul>
+        <h2 id="lista3">Op 3 Seleccione sus días</h2>
+        <div role="group" aria-labelledby="lista3">
+            <div role="checkbox" aria-checked="false" tabindex="0">Lunes</div>
+            <div role="checkbox" aria-checked="true" tabindex="0">Martes</div>
+            <div role="checkbox" aria-checked="false" tabindex="0">Miércoles</div>
+            <div role="checkbox" aria-checked="false" tabindex="0">Jueves</div>
+            <div role="checkbox" aria-checked="false" tabindex="0">Viernes</div>
+        </div>
+        <h2 id="lista4">Op 4 Seleccione sus días</h2>
+        <fieldset>
+            <legend>Op 4 Seleccione sus días</legend>
+            <ul>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Lunes</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="true" tabindex="0">Martes</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Miércoles</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Jueves</div>
+                </li>
+                <li>
+                    <div role="checkbox" aria-checked="false" tabindex="0">Viernes</div>
+                </li>
+            </ul>
+        </fieldset>
+
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Template</title>
+  </head>
+  <body>
+    <section class="andes-carousel-snapped__container" aria-roledescription="Carrusel" aria-label="ofertas" aria-live="polite">
+      <!-- Prev button -->
+      <button class="andes-carousel-snapped__control andes-carousel-snapped__control--previous" type="button" aria-label="Anterior" disabled aria-disabled="true">
+         <span aria-hidden="true" class="andes-carousel-snapped__control__icon-container">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="rgba(0, 0, 0, 0.9)"></svg>
+         </span>
+      </button>
+      <!-- Slides -->
+      <div class="andes-carousel-snapped">
+         <div class="andes-carousel-snapped__wrapper">
+            <div class="andes-carousel-snapped__slide carousel-demo__slide andes-carousel-snapped__slide--active" aria-roledescription="Descuentos" aria-label="1 de 3" data-slider="0" aria-hidden="false">
+              <img alt="Descuentos en electrodomésticos, 30% de descuento hasta 30cuotas sin interés" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1629470901533-home-sliderdesktop-2x.jpg">
+            </div>
+            <div class="andes-carousel-snapped__slide carousel-demo__slide andes-carousel-snapped__slide--next" aria-roledescription="Descuentos" aria-label="2 de 3" data-slider="1" aria-hidden="true">
+              <img alt="Semana del descanso: 60% de descuento y hasta 18 cuotas sin interés en colchones y sommiers" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1629488133561-home-sliderdesktop2x.jpg">
+            </div>
+            <div class="andes-carousel-snapped__slide carousel-demo__slide" aria-roledescription="Descuentos" aria-label="3 de 3" data-slider="2" aria-hidden="true">
+              <img alt="Electro: hasta 24 cuotas sin interés y descuentos de hasta 50%" src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1629730274681-home-sliderdesktop-2x.jpg">
+            </div>
+         </div>
+      </div>
+      <!-- Next Button -->
+      <button class="andes-carousel-snapped__control andes-carousel-snapped__control--next" type="button" aria-label="Siguiente">
+         <span aria-hidden="true" class="andes-carousel-snapped__control__icon-container">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="rgba(0, 0, 0, 0.9)"></svg>
+         </span>
+      </button>
+      <!-- Navigation / temp aria-hidden-->
+      <ul class="andes-carousel-snapped__pagination" aria-hidden="true">
+         <li class="andes-carousel-snapped__pagination-item andes-carousel-snapped__pagination-item--active">
+            <button>
+               <div class="andes-visually-hidden">Página 1</div>
+            </button>
+         </li>
+         <li class="andes-carousel-snapped__pagination-item">
+            <button>
+               <div class="andes-visually-hidden">Página 2</div>
+            </button>
+         </li>
+         <li class="andes-carousel-snapped__pagination-item">
+            <button>
+               <div class="andes-visually-hidden">Página 3</div>
+            </button>
+         </li>
+      </ul>
+    </section>
+    
+  </body>
+</html>

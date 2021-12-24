@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Resultados</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <main id="contenido">
+        <aside>
+            <h2>Filtro</h2>
+
+            <label>LLegan mañana<input type="checkbox" role="switch"></label>
+
+            <h3>Modelo</h3>
+            <label>Modelo 1<input type="checkbox"></label>
+            <h3>Marca</h3>
+            <label>Marca 1<input type="checkbox"></label>
+
+            <div class="andes-story-container">
+                <label class="andes-checkbox andes-switch andes-checkbox--default andes-checkbox--default">
+                    <input class="andes-checkbox__input" type="checkbox">
+                    <span class="andes-checkbox__label andes-checkbox__label-text">This is the label of
+                        checkbox.</span><span class="andes-checkbox__mimic"></span>
+                </label>
+            </div>
+
+        </aside>
+        <h1>Resultados</h1>
+        <a class="sr-only sr-only-focusable" href="#resultados">Saltar filtro</a>
+
+
+        <section id="resultados">
+            <h2>Listado</h2>
+            <ul>
+                <li><a href="#">Producto 1</a></li>
+                <li><a href="#">Producto 2</a></li>
+                <li><a href="#">Producto 3</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>Pie de página</footer>
+
+</body>
+
+</html>

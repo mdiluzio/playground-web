@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Described</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>aria-describedby dinámico</h1>
+
+        <h2>Prueba 1</h2>
+        <label>Nombre
+            <input id="open1" aria-describedby="pepe" type="text">
+        </label>
+        <!-- Estable -->
+
+        <h2>Prueba 2</h2>
+        <label>Nombre
+            <input id="open2" type="text">
+        </label>
+        <!-- Genera inestabilidad -->
+
+    </main>
+
+    <footer></footer>
+
+    <script>
+        // Adding an element to the DOM dynamically on focus
+        var open1 = document.getElementById("open1");
+
+        open1.addEventListener("focus", function () {
+            open1.insertAdjacentHTML('afterend', '<div hidden id="pepe">Mensaje del tooltip</div>');
+        });
+
+        // Adding an element to the DOM dynamically on focus and add atributo aria-dedscribedby
+        var open2 = document.getElementById("open2");
+
+        open2.addEventListener("focus", function () {
+            open2.setAttribute("aria-describedby", "pepe2");
+            open2.insertAdjacentHTML('afterend', '<div hidden id="pepe2">Mensaje del tooltip</div>');
+        });
+    </script>
+
+</body>
+
+</html>

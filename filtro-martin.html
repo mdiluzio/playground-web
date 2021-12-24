@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Filters</title>
+    <style>
+        button {
+            appearance: none;
+            border: none;
+            background: none;
+            display: block;
+        }
+
+        div {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Filtro de resultados</h1>
+
+    <div role="heading" aria-level="2">Op 1: Propuesta guille: form y buttons con formaction</div>
+    <form method="GET">
+        <button type="submit"
+            formaction="https://celulares.mercadolibre.com.ar/note-8/xiaomi_NoIndex_True#applied_filter_id%3DMODEL%26applied_filter_name%3DModelo%26applied_filter_order%3D5%26applied_value_id%3D3362707%26applied_value_name%3DNote+8%26applied_value_order%3D99%26applied_value_results%3D218%26is_custom%3Dfalse">
+            Note 8 (218)
+        </button>
+        <button type="submit"
+            formaction="https://celulares.mercadolibre.com.ar/xiaomi/redmi/note-7-48-mpx/xiaomi_NoIndex_True#applied_filter_id%3DMODEL%26applied_filter_name%3DModelo%26applied_filter_order%3D5%26applied_value_id%3D7917261%26applied_value_name%3DNote+7+%2848+Mpx%29%26applied_value_order%3D97%26applied_value_results%3D153%26is_custom%3Dfalse">
+            Note 7 (48 Mpx) (153)
+        </button>
+        <button type="submit"
+            formaction="https://celulares.mercadolibre.com.ar/note-9/xiaomi_NoIndex_True#applied_filter_id%3DMODEL%26applied_filter_name%3DModelo%26applied_filter_order%3D5%26applied_value_id%3D8678042%26applied_value_name%3DNote+9%26applied_value_order%3D103%26applied_value_results%3D140%26is_custom%3Dfalse">
+            Note 9 (140)
+        </button>
+    </form>
+
+    <div role="heading" aria-level="2">Op 2: buttons con formaction en form con role presentation y role link a los
+        botones</div>
+    <form method="GET" role="presentation">
+        <button type="submit" role="link"
+            formaction="https://celulares.mercadolibre.com.ar/hasta-2-GB-ram/xiaomi#applied_filter_id%3DRAM%26applied_filter_name%3DMemoria+RAM%26applied_filter_order%3D6%26applied_value_id%3D%28*-2GB%5D%26applied_value_name%3D2+GB+o+menos%26applied_value_order%3D1%26applied_value_results%3D186%26is_custom%3Dfalse">
+            2 GB o menos (186)
+        </button>
+        <button type="submit" role="link"
+            formaction="https://celulares.mercadolibre.com.ar/3-GB-ram/xiaomi#applied_filter_id%3DRAM%26applied_filter_name%3DMemoria+RAM%26applied_filter_order%3D6%26applied_value_id%3D%5B3GB-3GB%5D%26applied_value_name%3D3+GB%26applied_value_order%3D2%26applied_value_results%3D242%26is_custom%3Dfalse">
+            3 GB (242)
+        </button>
+        <button type="submit" role="link"
+            formaction="https://celulares.mercadolibre.com.ar/4-GB-ram/xiaomi#applied_filter_id%3DRAM%26applied_filter_name%3DMemoria+RAM%26applied_filter_order%3D6%26applied_value_id%3D%5B4GB-4GB%5D%26applied_value_name%3D4+GB%26applied_value_order%3D3%26applied_value_results%3D1066%26is_custom%3Dfalse">
+            4 GB (1.066)
+        </button>
+    </form>
+    ​
+    <div role="heading" aria-level="2">Op 3: buttons con formaction sin form y role link a los botones</div>
+    <button type="submit" role="link"
+        formaction="https://celulares.mercadolibre.com.ar/note-8/xiaomi_NoIndex_True#applied_filter_id%3DMODEL%26applied_filter_name%3DModelo%26applied_filter_order%3D5%26applied_value_id%3D3362707%26applied_value_name%3DNote+8%26applied_value_order%3D99%26applied_value_results%3D218%26is_custom%3Dfalse">
+        Note 8 (218)
+    </button>
+    <button type="submit" role="link"
+        formaction="https://celulares.mercadolibre.com.ar/xiaomi/redmi/note-7-48-mpx/xiaomi_NoIndex_True#applied_filter_id%3DMODEL%26applied_filter_name%3DModelo%26applied_filter_order%3D5%26applied_value_id%3D7917261%26applied_value_name%3DNote+7+%2848+Mpx%29%26applied_value_order%3D97%26applied_value_results%3D153%26is_custom%3Dfalse">
+        Note 7 (48 Mpx) (153)
+    </button>
+    <button type="submit" role="link"
+        formaction="https://celulares.mercadolibre.com.ar/note-9/xiaomi_NoIndex_True#applied_filter_id%3DMODEL%26applied_filter_name%3DModelo%26applied_filter_order%3D5%26applied_value_id%3D8678042%26applied_value_name%3DNote+9%26applied_value_order%3D103%26applied_value_results%3D140%26is_custom%3Dfalse">
+        Note 9 (140)
+    </button>
+
+    <div role="heading" aria-level="2">Op 4: buttons con formaction en form y role link a los botones</div>
+    <form method="GET">
+        <button type="submit" role="link"
+            formaction="https://celulares.mercadolibre.com.ar/hasta-2-GB-ram/xiaomi#applied_filter_id%3DRAM%26applied_filter_name%3DMemoria+RAM%26applied_filter_order%3D6%26applied_value_id%3D%28*-2GB%5D%26applied_value_name%3D2+GB+o+menos%26applied_value_order%3D1%26applied_value_results%3D186%26is_custom%3Dfalse">
+            2 GB o menos (186)
+        </button>
+        <button type="submit" role="link"
+            formaction="https://celulares.mercadolibre.com.ar/3-GB-ram/xiaomi#applied_filter_id%3DRAM%26applied_filter_name%3DMemoria+RAM%26applied_filter_order%3D6%26applied_value_id%3D%5B3GB-3GB%5D%26applied_value_name%3D3+GB%26applied_value_order%3D2%26applied_value_results%3D242%26is_custom%3Dfalse">
+            3 GB (242)
+        </button>
+        <button type="submit" role="link"
+            formaction="https://celulares.mercadolibre.com.ar/4-GB-ram/xiaomi#applied_filter_id%3DRAM%26applied_filter_name%3DMemoria+RAM%26applied_filter_order%3D6%26applied_value_id%3D%5B4GB-4GB%5D%26applied_value_name%3D4+GB%26applied_value_order%3D3%26applied_value_results%3D1066%26is_custom%3Dfalse">
+            4 GB (1.066)
+        </button>
+    </form>
+
+</body>
+
+</html>

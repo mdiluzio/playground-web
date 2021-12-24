@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Botones</h1>
+    </header>
+
+    <main id="contenido">
+
+        <h2>enlace con role</h2>
+        <a href="#" class="btn" id="divButton" role="button">Categorías 1</a>
+
+        <h2>div con role</h2>
+        <div tabindex="0" class="btn" id="divButton2" role="button">Categorías 2</div>
+
+    </main>
+
+    <script>
+        const divButton = document.getElementById('divButton');
+        const divButton2 = document.getElementById('divButton2');
+
+
+        //divButton.addEventListener('click', downloadStuff);
+        //divButton2.addEventListener('click', downloadStuff);
+        
+        divButton.addEventListener('keydown', (event) => {
+            event.preventDefault();
+            console.log("Categorías 1");
+            if (event.code === 'Space') {
+                event.preventDefault();
+                downloadStuff();
+            }
+            if (event.code === 'Enter') {
+                event.preventDefault();
+                downloadStuff();
+            }
+        });
+        divButton2.addEventListener('keydown', (event) => {
+            console.log("Categorías 2");
+            if (event.code === 'Space') {
+                downloadStuff();
+            }
+            if (event.code === 'Enter') {
+                downloadStuff();
+            }
+        });
+        
+
+        function downloadStuff() {
+            event.preventDefault();
+            alert('Boton desplegado');
+        }
+    </script>
+
+    <footer></footer>
+</body>
+
+</html>

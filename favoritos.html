@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Título</title>
+</head>
+<body>
+
+<header>
+    <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+</header>
+
+<nav><ul><li>Inicio</li></ul></nav>
+
+<main>
+
+    <h1>Polycard</h1>
+    
+    <article>
+    	<h2>Boton</h2> 
+        <button type="submit" aria-pressed="false" class="switch">  
+			Favorito
+		</button> 
+        <script>
+        document.querySelectorAll(".switch").forEach(function(theSwitch) {
+            theSwitch.addEventListener("click", handleClickEvent, false);
+          });
+          
+          function handleClickEvent(evt) {
+            let el = evt.target;
+          
+            if (el.getAttribute("aria-pressed") == "true") {
+                el.setAttribute("aria-pressed", "false");
+            } else {
+                el.setAttribute("aria-pressed", "true");
+            }
+          }
+        </script>
+
+
+    </article>
+    
+     <article>
+    	<h2>Switch</h2> 
+        <button type="submit" role="switch" aria-checked="false" id="speakerPower" class="switch2">
+            <span>Favorito</span>
+        </button>
+        <p id="desc">Zapatillas pepe</p>
+        <script>
+        document.querySelectorAll(".switch2").forEach(function(theSwitch) {
+            theSwitch.addEventListener("click", handleClickEvent, false);
+          });
+          
+          function handleClickEvent(evt) {
+            let el = evt.target;
+          
+            if (el.getAttribute("aria-checked") == "true") {
+                el.setAttribute("aria-checked", "false");
+            } else {
+                el.setAttribute("aria-checked", "true");
+            }
+          }
+        </script>
+
+
+    </article>
+
+</main>
+
+  <footer>Pie de pagina</footer>
+</body>
+</html>

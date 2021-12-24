@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>aria-live</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>aria-live</h1>
+
+        <h2>Uno</h2>
+
+        <div aria-live="assertive" id="msg1">Hola</div>
+
+        <h2>Dos</h2>
+
+        <div aria-live="polite" id="msg2"></div>
+
+        <script>
+
+            var msg1 = document.getElementById("msg1");
+            var msg2 = document.getElementById("msg2");
+
+            window.onload = function () {
+                myFunction();
+            };
+
+            function myFunction() {
+                myVar = setTimeout(alertFunc, 3000);
+            }
+
+            function alertFunc() {
+                msg1.innerHTML = "Mensaje 1";
+                msg1.innerHTML = "Mensaje 2";
+            }
+
+
+
+
+        </script>
+
+    </main>
+
+</body>
+
+</html>

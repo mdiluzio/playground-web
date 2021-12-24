@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Menu tecnología</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Menu dialog</h1>
+
+        <h2>Submenú con encabezados y listas individuales (actual)</h2>
+        <nav>
+            <ul style="list-style: none">
+                <li>Inmuebles</li>
+                <li><a href="#pepe" role="button" id="btn-tecnologia" aria-expanded="false">Tecnología</a>
+                    <section id="cat-tecnologia" hidden aria-label="Submenú tecnología">
+                        <h1>Tecnología</h1>
+                        <article>
+                            <h2 class="nav-categs-detail__title">
+                                <a href="https://www.mercadolibre.com.ar/c/celulares-y-telefonos#menu=categories">Celulares
+                                    y Teléfonos</a>
+                            </h2>
+                            <ul class="nav-categs-detail__categ-list">
+                                <li><a href="https://celulares.mercadolibre.com.ar/#menu=categories">Celulares
+                                        y
+                                        Smartphones</a></li>
+                                <li><a href="https://celulares.mercadolibre.com.ar/accesorios/#menu=categories">Accesorios
+                                        para Celulares</a></li>
+                            </ul>
+                        </article>
+                        <article class="nav-categs-detail__categ" data-type="half">
+                            <h2 class="nav-categs-detail__title">
+                                <a href="https://www.mercadolibre.com.ar/c/computacion#menu=categories">Computación</a>
+                            </h2>
+                            <ul class="nav-categs-detail__categ-list">
+                                <li><a href="https://computacion.mercadolibre.com.ar/componentes-pc/#menu=categories">Componentes
+                                        de PC</a></li>
+                                <li><a
+                                        href="https://computacion.mercadolibre.com.ar/impresion/#menu=categories">Impresión</a>
+                                </li>
+                                <li><a
+                                        href="https://computacion.mercadolibre.com.ar/tablets-accesorios/#menu=categories">Tablets
+                                        y Accesorios</a></li>
+                                <li><a
+                                        href="https://computacion.mercadolibre.com.ar/pc-escritorio/pc/#menu=categories">PC</a>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="nav-categs-detail__categ" data-type="thirds">
+                            <h2 class="nav-categs-detail__title">
+                                <a href="https://www.mercadolibre.com.ar/c/camaras-y-accesorios#menu=categories">Cámaras
+                                    y Accesorios</a>
+                            </h2>
+                            <ul class="nav-categs-detail__categ-list">
+                                <li><a
+                                        href="https://camaras-digitales.mercadolibre.com.ar/camaras/digitales/#menu=categories">Cámaras
+                                        Digitales</a></li>
+                                <li><a href="https://camaras-digitales.mercadolibre.com.ar/accesorios/#menu=categories">Accesorios
+                                        para Cámaras</a></li>
+                            </ul>
+                        </article>
+                        <article class="nav-categs-detail__categ" data-type="half">
+                            <h2 class="nav-categs-detail__title">
+                                <a href="https://www.mercadolibre.com.ar/c/electronica-audio-y-video#menu=categories">Electrónica,
+                                    Audio y Video</a>
+                            </h2>
+                            <ul class="nav-categs-detail__categ-list">
+                                <li><a href="https://electronica.mercadolibre.com.ar/audio/#menu=categories">Audio</a>
+                                </li>
+                                <li><a
+                                        href="https://electronica.mercadolibre.com.ar/accesorios-audio-y-video/#menu=categories">Accesorios
+                                        para Audio y Video</a></li>
+                                <li><a
+                                        href="https://electronica.mercadolibre.com.ar/componentes-electronicos/#menu=categories">Componentes
+                                        Electrónicos</a></li>
+                                <li><a
+                                        href="https://electronica.mercadolibre.com.ar/drones-accesorios/#menu=categories">Drones
+                                        y Accesorios</a></li>
+                            </ul>
+                        </article>
+                        <article class="nav-categs-detail__categ" data-type="thirds">
+                            <h2 class="nav-categs-detail__title">
+                                <a href="https://www.mercadolibre.com.ar/c/consolas-y-videojuegos#menu=categories">Consolas
+                                    y Videojuegos</a>
+                            </h2>
+                            <ul class="nav-categs-detail__categ-list">
+                                <li><a
+                                        href="https://videojuegos.mercadolibre.com.ar/videojuegos/#menu=categories">Videojuegos</a>
+                                </li>
+                                <li><a
+                                        href="https://videojuegos.mercadolibre.com.ar/accesorios-consolas-playstation/#menu=categories">Para
+                                        PlayStation</a></li>
+                            </ul>
+                        </article>
+                        <article class="nav-categs-detail__categ" data-type="half">
+                            <h2 class="nav-categs-detail__title">
+                                <a
+                                    href="https://televisores.mercadolibre.com.ar/televisores/#menu=categories">Televisores</a>
+                            </h2>
+                            <ul class="nav-categs-detail__categ-list">
+
+                            </ul>
+                        </article>
+                    </section>
+                </li>
+                <li>Hogar y Muebles</li>
+            </ul>
+        </nav>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ally.js/1.4.1/ally.min.js"></script>
+    <script>
+        console.log('loaded ally.js in version', ally.version);
+        console.log('focusable elements', ally.query.focusable());
+    </script>
+
+    <script>
+
+
+
+        /*
+        $('#boton').on('focus', function () {
+            $('#boton').attr('aria-expanded', 'false');
+            $('#categorias').attr('hidden', 'hidden');
+        });
+
+        $('#fuera').on('focus', function () {
+            $('#boton').attr('aria-expanded', 'false');
+            $('#categorias').attr('hidden', 'hidden');
+        });
+
+        $('#fuera2').on('focus', function () {
+            $('#boton').attr('aria-expanded', 'false');
+            $('#categorias').attr('hidden', 'hidden');
+        });
+        */
+
+
+        // Grab the elements we need to interact with
+        var openButton = document.getElementById('btn-tecnologia');
+        var dialog = document.getElementById('cat-tecnologia');
+        var closeButton = document.getElementById('close-dialog');
+
+        // Data filled by openDialog() and later used by closeDialog()
+        var keyHandle;
+        var tabHandle;
+        var disabledHandle;
+        var hiddenHandle;
+        var focusedElementBeforeDialogOpened;
+
+        function openDialog() {
+            // Remember the focused element before we opened the dialog
+            // so we can return focus to it once we close the dialog.
+            focusedElementBeforeDialogOpened = document.activeElement;
+
+            // We're using a transition to reveal the dialog,
+            // so wait until the element is visible, before
+            // finding the first keyboard focusable element
+            // and passing focus to it, otherwise the browser
+            // might scroll the document to reveal the element
+            // receiving focus
+            ally.when.visibleArea({
+                context: dialog,
+                callback: function (context) {
+                    // the dialog is visible on screen, so find the first
+                    // keyboard focusable element (giving any element with
+                    // autofocus attribute precendence). If the dialog does
+                    // not contain any keyboard focusabe elements, focus will
+                    // be given to the dialog itself.
+                    var element = ally.query.firstTabbable({
+                        context: context, // context === dialog
+                        defaultToContext: true,
+                    });
+                    element.focus();
+                },
+            });
+
+            // Make sure that no element outside of the dialog
+            // can be interacted with while the dialog is visible.
+            // This means we don't have to handle Tab and Shift+Tab,
+            // but can defer that to the browser's internal handling.
+            disabledHandle = ally.maintain.disabled({
+                filter: dialog,
+            });
+
+            // Make sure that no element outside of the dialog
+            // is exposed via the Accessibility Tree, to prevent
+            // screen readers from navigating to content it shouldn't
+            // be seeing while the dialog is open. See example:
+            // https://marcysutton.com/slides/mobile-a11y-seattlejs/#/36
+            hiddenHandle = ally.maintain.hidden({
+                filter: dialog,
+            });
+
+            // Make sure that Tab key controlled focus is trapped within
+            // the tabsequence of the dialog and does not reach the
+            // browser's UI, e.g. the location bar.
+            tabHandle = ally.maintain.tabFocus({
+                context: dialog,
+            });
+
+            // React to enter and escape keys as mandated by ARIA Practices
+            keyHandle = ally.when.key({
+                escape: closeDialogByKey,
+                // Note: in non-interactive content you would also bind the enter
+                // key to close the dialog. In our example the form's submit event
+                // will cover that instead. The enter handler would be executed
+                // for *every* press of the enter key, even if the focused element
+                // is a button (which would invoke the default action). Try using
+                // a <form> for interactive content to get around that problem.
+                // enter: closeDialogByKey,
+            });
+
+            // Show the dialog
+            dialog.hidden = false;
+        }
+
+        function closeDialogByKey() {
+            // we need to let the keyboard event handlers finish,
+            // before actually closing the dialog. Otherwise the
+            // keydown of <kbd>enter</kbd> will close the dialog,
+            // focus is passed back to the open-dialog-button and
+            // the keyup of <kbd>enter</kbd> will open the dialog
+            // again.
+            setTimeout(closeDialog);
+            // alternatively we could've called event.preventDefault()
+            // and then run closeDialog() synchronously
+        }
+
+        function closeDialog() {
+            // undo listening to keyboard
+            keyHandle.disengage();
+            // undo trapping Tab key focus
+            tabHandle.disengage();
+            // undo hiding elements outside of the dialog
+            hiddenHandle.disengage();
+            // undo disabling elements outside of the dialog
+            disabledHandle.disengage();
+            // return focus to where it was before we opened the dialog
+            focusedElementBeforeDialogOpened.focus();
+            // hide or remove the dialog
+            dialog.hidden = true;
+        }
+
+        function saveDialog(event) {
+            // do not submit the form
+            event.preventDefault();
+
+            // do something with the entered data
+            var name = dialog.querySelector('input').value;
+            console.log('entered name', name);
+
+            closeDialog();
+        }
+
+        // wire up showing/hiding the dialog
+        openButton.addEventListener('click', openDialog, false);
+        closeButton.addEventListener('click', closeDialog, false);
+        dialog.addEventListener('submit', saveDialog, true);
+
+
+
+    </script>
+
+
+</body>
+
+</html>

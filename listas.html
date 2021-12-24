@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Listas</title>
+    <meta charset="utf-8">
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .andes-visually-hidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <main>
+        <h1>Listas</h1>
+
+        <h2>Navigation</h2>
+        <ul>
+            <a class="andes-list__item andes-list__item--size-medium" role="listitem" aria-disabled="false"
+                tabindex="0">
+                <div class="andes-visually-hidden"><span>Vehículos</span></div>
+                <div class="andes-list__item-first-column">
+                    <div aria-hidden="true"></div>
+                    <div class="andes-list__item-text">
+                        <div class="andes-list__item-primary" aria-hidden="true">Vehículos</div>
+                    </div>
+                </div>
+                <div class="andes-list__item-second-column">
+                    <div class="andes-list__item-chevron andes-list__item-chevron--centered"><svg width="20px"
+                            height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                fill-opacity="0.449999988">
+                                <polygon fill="#000000" fill-rule="nonzero"
+                                    transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
+                                    points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
+                                </polygon>
+                            </g>
+                        </svg></div>
+                </div>
+            </a>
+        </ul>
+
+        <hr>
+
+        <h2>Default</h2>
+        <ul>
+            <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-secondary" role="listitem"
+                aria-disabled="false">
+                <div class="andes-visually-hidden"><span>Iphone 11,256gb de memoria,$1100</span></div>
+                <div class="andes-list__item-first-column">
+                    <div aria-hidden="true"></div>
+                    <div class="andes-list__item-text">
+                        <div class="andes-list__item-primary" aria-hidden="true">Iphone 11</div>
+                        <div class="andes-list__item-secondary" aria-hidden="true">256gb de memoria</div>
+                    </div>
+                </div>
+                <div class="andes-list__item-second-column">
+                    <div class="andes-list__item-tertiary andes-list__item-tertiary--centered" aria-hidden="true">$1100
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Image</h2>
+        <ul>
+            <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-image andes-list__item-with-secondary"
+                role="listitem" aria-disabled="false">
+                <div class="andes-visually-hidden"><span>Anabel,Frontend developer</span></div>
+                <div class="andes-list__item-first-column">
+                    <div aria-hidden="true"><img class="andes-list__item-image"
+                            src="https://http2.mlstatic.com/D_Q_NP_221705-MLA25074486775_092016-I.webp" alt="Test tile">
+                    </div>
+                    <div class="andes-list__item-text">
+                        <div class="andes-list__item-primary" aria-hidden="true">Anabel</div>
+                        <div class="andes-list__item-secondary" aria-hidden="true">Frontend developer</div>
+                    </div>
+                </div>
+                <div class="andes-list__item-second-column">
+                    <div class="andes-list__item-tertiary andes-list__item-tertiary--centered" aria-hidden="false">
+                        <button type="button" class="andes-button andes-button--small andes-button--loud"
+                            aria-label="Contactar con Anabel"><span
+                                class="andes-button__content">Contactar</span></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Group</h2>
+        <ul>
+            <li class="andes-list__group andes-list__group--size-medium"><span
+                    class="andes-list__group--header">Tarjetas de
+                    crédito</span>
+                <ul class="andes-list__group--sublist">
+                    <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-secondary"
+                        role="listitem" aria-disabled="false">
+                        <div class="andes-visually-hidden"><span>Visa,Todos los bancos</span></div>
+                        <div class="andes-list__item-first-column">
+                            <div aria-hidden="true"></div>
+                            <div class="andes-list__item-text">
+                                <div class="andes-list__item-primary" aria-hidden="true">Visa</div>
+                                <div class="andes-list__item-secondary" aria-hidden="true">Todos los bancos</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-secondary"
+                        role="listitem" aria-disabled="false">
+                        <div class="andes-visually-hidden"><span>Mastercard,Banco Nación</span></div>
+                        <div class="andes-list__item-first-column">
+                            <div aria-hidden="true"></div>
+                            <div class="andes-list__item-text">
+                                <div class="andes-list__item-primary" aria-hidden="true">Mastercard</div>
+                                <div class="andes-list__item-secondary" aria-hidden="true">Banco Nación</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Nueva</h2>
+        <ul class="andes-list andes-list--default andes-list--selectable" aria-label="Categorías">
+            <li class="andes-list__item andes-list__item--size-medium"><a
+                    href="https://www.mercadolibre.com.ar/vehiculos" class="andes-list__item-anchor">
+                    <div class="andes-list__item-first-column">
+                        <div class="andes-list__item-text"><span class="andes-list__item-primary">Vehículos</span></div>
+                    </div>
+                    <div class="andes-list__item-second-column">
+                        <div class="andes-list__item-chevron andes-list__item-chevron--centered"><svg width="20px"
+                                height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    fill-opacity="0.449999988">
+                                    <polygon fill="#000000" fill-rule="nonzero"
+                                        transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
+                                        points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
+                                    </polygon>
+                                </g>
+                            </svg></div>
+                    </div>
+                </a></li>
+            <li class="andes-list__item andes-list__item--size-medium"><a
+                    href="https://www.mercadolibre.com.ar/inmuebles" class="andes-list__item-anchor">
+                    <div class="andes-list__item-first-column">
+                        <div class="andes-list__item-text"><span class="andes-list__item-primary">Inmuebles</span></div>
+                    </div>
+                    <div class="andes-list__item-second-column">
+                        <div class="andes-list__item-chevron andes-list__item-chevron--centered"><svg width="20px"
+                                height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    fill-opacity="0.449999988">
+                                    <polygon fill="#000000" fill-rule="nonzero"
+                                        transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
+                                        points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
+                                    </polygon>
+                                </g>
+                            </svg></div>
+                    </div>
+                </a></li>
+            <li class="andes-list__item andes-list__item--size-medium"><a
+                    href="https://www.mercadolibre.com.ar/c/electrodomesticos-y-aires-ac"
+                    class="andes-list__item-anchor">
+                    <div class="andes-list__item-first-column">
+                        <div class="andes-list__item-text"><span
+                                class="andes-list__item-primary">Electrodomésticos</span></div>
+                    </div>
+                    <div class="andes-list__item-second-column">
+                        <div class="andes-list__item-chevron andes-list__item-chevron--centered"><svg width="20px"
+                                height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                    fill-opacity="0.449999988">
+                                    <polygon fill="#000000" fill-rule="nonzero"
+                                        transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
+                                        points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
+                                    </polygon>
+                                </g>
+                            </svg></div>
+                    </div>
+                </a></li>
+            <li class="andes-list__item andes-list__item--size-medium"><a
+                    href="https://www.mercadolibre.com.ar/c/herramientas-y-construccion"
+                    class="andes-list__item-anchor">
+                    <div class="andes-list__item-first-column">
+                        <div class="andes-list__item-text"><span class="andes-list__item-primary">Herramientas y
+                                Construcción</span></div>
+                    </div>
+                    <div class="andes-list__item-second-column">
+
+                    </div>
+                </a>
+                <div class="andes-list__item-chevron andes-list__item-chevron--centered"><svg width="20px"
+                    height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                        fill-opacity="0.449999988">
+                        <polygon fill="#000000" fill-rule="nonzero"
+                            transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
+                            points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
+                        </polygon>
+                    </g>
+                </svg></div>
+            </li>
+        </ul>
+
+
+
+
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

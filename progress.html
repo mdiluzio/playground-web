@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Progress bar</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Progress bar</h1>
+
+        <h2>role progressbar</h2>
+
+        <div class="andes-story-container">
+            <label
+                class="andes-form-control andes-form-control--textfield andes-form-control--countdown andes-form-control--default demo-textfield"><span
+                    class="andes-form-control__label">Default</span>
+                <div class="andes-form-control__control">
+                    <input onkeypress="show();" rows="1" class="andes-form-control__field" maxlength="25"
+                        id="textfield-default" aria-invalid="false" aria-describedby="textfield-default-message progress"
+                        value="">
+                </div>
+            </label>
+            <div class="andes-form-control__bottom">
+                <span id="textfield-default-message" class="andes-form-control__message">Algún texto de ayuda</span>
+                <span class="andes-form-control__countdown" aria-label="Máximo 25 caracteres" role="progressbar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="25" id="progress">0 / 25</span>
+                <span id="count" class="sr-only-meli" aria-live="polite" aria-atomic="true"></span>
+            </div>
+        </div>
+
+        <h2>Aria hidden y sr-only</h2>
+
+        <div class="andes-story-container">
+            <label
+                class="andes-form-control andes-form-control--textfield andes-form-control--countdown andes-form-control--default demo-textfield"><span
+                    class="andes-form-control__label">Default</span>
+                <div class="andes-form-control__control">
+                    <input onkeypress="show2();" rows="1" class="andes-form-control__field" maxlength="25"
+                        id="textfield-default2" aria-invalid="false" aria-describedby="textfield-default-message2 sr"
+                        value="">
+                </div>
+            </label>
+            <div class="andes-form-control__bottom">
+                <span id="textfield-default-message2" class="andes-form-control__message">Algún texto de ayuda</span>
+                <span class="andes-form-control__countdown" aria-hidden="true" id="progress2">0 / 25</span>
+                <span class="andes-form-control__countdown sr-only-meli" id="sr" aria-live="polite" aria-atomic="true" aria-hidden="true">25 caracteres máximo</span>
+            </div>
+            <!-- nvda y jaws leen el aria-describedby en cada caracter ingresado -->
+        </div>
+        
+
+
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function show() {
+            var x = document.getElementById("textfield-default").value;
+            var y = x.length;
+            document.getElementById("progress").innerHTML = y + " / 25";
+            document.getElementById("progress").setAttribute("aria-valuenow", y);
+            //aria-live
+            if ((25 - y) < 5) {
+                document.getElementById("count").innerHTML = (25 - y) + " Caracteres restantes";
+            }
+        }
+
+        function show2() {
+            var x = document.getElementById("textfield-default2").value;
+            var y = x.length;
+            document.getElementById("progress2").innerHTML = y + " / 25";
+            //aria-live
+            if ((25 - y) < 5) {
+                document.getElementById("sr").removeAttribute("aria-hidden");
+                document.getElementById("sr").innerHTML = (25 - y) + " Caracteres restantes";
+            } else {
+                document.getElementById("sr").setAttribute("aria-hidden", "true");
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Paginador</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+
+        .andes-pagination {
+            font-weight: 400;
+            font-family: "Proxima Nova", -apple-system, "Helvetica Neue", Helvetica, "Roboto", Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .andes-pagination__button {
+            margin-left: 4px;
+            display: inline-block;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .andes-pagination__button--current {
+            pointer-events: none;
+        }
+
+        .andes-pagination__button--current .andes-pagination__link:active,
+        .andes-pagination__button--current .andes-pagination__link:link,
+        .andes-pagination__button--current .andes-pagination__link:visited {
+            text-decoration: none;
+            color: rgba(0, 0, 0, .9);
+        }
+
+        .andes-pagination__button--back .andes-pagination__arrow {
+            transform: rotate(225deg);
+        }
+
+        .andes-pagination__button--next .andes-pagination__arrow {
+            transform: rotate(45deg);
+        }
+
+        .andes-pagination__arrow {
+            width: 7px;
+            height: 7px;
+            display: inline-block;
+            border-style: solid;
+            border-width: 1px 1px 0 0;
+            border-color: rgba(0, 0, 0, .55);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <main>
+
+        <h1>Paginador</h1>
+
+        <svg role="presentation "24" height="24"
+                            xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                            <path
+                                d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
+                        </svg>
+
+        <h2>1. Con foco</h2>
+        <div class="andes-story-container">
+            <nav aria-label="Páginas de productos">
+                <ul class="andes-pagination">
+                    <li class="andes-pagination__button andes-pagination__button--back">
+                        <a class="andes-pagination__link" href="#anterior" title="Anterior">
+                            <span class="andes-pagination__arrow"></span>
+                            <span class="andes-pagination__arrow-title">Anterior</span>
+                        </a>
+                    </li>
+                    <li class="andes-pagination__button">
+                        <a class="andes-pagination__link" href="#1">1</a>
+                    </li>
+                    <li class="andes-pagination__button andes-pagination__button--current"><a
+                            class="andes-pagination__link" href="#" aria-current="page">2</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#3">3</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#4">4</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#5">5</a></li>
+                    <li class="andes-pagination__button andes-pagination__button--next"><a href="#siguiente"
+                            class="andes-pagination__link" title="Siguiente"><span
+                                class="andes-pagination__arrow-title">Siguiente</span><span
+                                class="andes-pagination__arrow"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <hr>
+
+        <h2>2. Quitando foco teclado</h2>
+        <div class="andes-story-container">
+            <nav aria-label="Páginas de productos">
+                <ul class="andes-pagination">
+                    <li class="andes-pagination__button andes-pagination__button--back">
+                        <a class="andes-pagination__link" href="#anterior" title="Anterior">
+                            <span class="andes-pagination__arrow"></span>
+                            <span class="andes-pagination__arrow-title">Anterior</span>
+                        </a>
+                    </li>
+                    <li class="andes-pagination__button">
+                        <a class="andes-pagination__link" href="#1">1</a>
+                    </li>
+                    <li class="andes-pagination__button andes-pagination__button--current"><a
+                            class="andes-pagination__link" href="#2" aria-current="page" tabindex="-1">2</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#3">3</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#4">4</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#5">5</a></li>
+                    <li class="andes-pagination__button andes-pagination__button--next"><a href="#siguiente"
+                            class="andes-pagination__link" title="Siguiente"><span
+                                class="andes-pagination__arrow-title">Siguiente</span><span
+                                class="andes-pagination__arrow"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- En modo exploracion es alcanzable el enlace con tabindex="-1" -->
+
+        <hr>
+
+        <h2>3. Sin enlace</h2>
+        <div class="andes-story-container">
+            <nav aria-label="Páginas de productos">
+                <ul class="andes-pagination">
+                    <li class="andes-pagination__button andes-pagination__button--back">
+                        <a class="andes-pagination__link" href="#anterior" title="Anterior">
+                            <span class="andes-pagination__arrow"></span>
+                            <span class="andes-pagination__arrow-title">Anterior</span>
+                        </a>
+                    </li>
+                    <li class="andes-pagination__button">
+                        <a class="andes-pagination__link" href="#1">1</a>
+                    </li>
+                    <li class="andes-pagination__button andes-pagination__button--current" aria-current="page">2</li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#3">3</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#4">4</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link" href="#5">5</a></li>
+                    <li class="andes-pagination__button andes-pagination__button--next"><a href="#siguiente"
+                            class="andes-pagination__link" title="Siguiente"><span
+                                class="andes-pagination__arrow-title">Siguiente</span><span
+                                class="andes-pagination__arrow"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <hr>
+
+        <h2>4. Enlace desabilitado</h2>
+
+        <div class="andes-story-container">
+            <nav aria-label="Páginas de productos">
+                <ul class="andes-pagination">
+                    <li class="andes-pagination__button andes-pagination__button--back">
+                        <a class="andes-pagination__link" href="#anterior" title="Anterior">
+                            <span class="andes-pagination__arrow"></span>
+                            <span class="andes-pagination__arrow-title">Anterior</span>
+                        </a>
+                    </li>
+                    <li class="andes-pagination__button">
+                        <a class="andes-pagination__link" href="#1">1</a>
+                    </li>
+                    <li class="andes-pagination__button andes-pagination__button--current"><a role="link" aria-disabled="true" aria-current="page">2</a>
+                    </li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link"
+                            href="#3">3</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link"
+                            href="#4">4</a></li>
+                    <li class="andes-pagination__button"><a class="andes-pagination__link"
+                            href="#5">5</a></li>
+                    <li class="andes-pagination__button andes-pagination__button--next"><a href="#siguiente"
+                            class="andes-pagination__link" title="Siguiente"><span
+                                class="andes-pagination__arrow-title">Siguiente</span><span
+                                class="andes-pagination__arrow"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

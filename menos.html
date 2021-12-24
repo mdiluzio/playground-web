@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Menos</title>
+  <meta charset="utf-8">
+
+  <style>
+    .sr-only {
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(50%);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+    }
+    .sr-only-meli {
+      border: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1;
+      margin: 0 -1px -1px 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a class="" href="#contenido">Saltar a contenido</a>
+  </header>
+
+  <nav>
+    <ul>
+      <li>Inicio</li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <h1>Pesos negativos</h1>
+
+    <h2 class="example">Test 1</h2>
+    <div class="example">-36</div>
+  
+    <h2 class="example">Test 2</h2>
+    <div class="example">- 45</div>
+    <!-- VO: numero solo -->
+    <!-- Talkback: numero solo -->
+    <!-- NVDA: numero solo -->
+    <!-- JAWS: numero solo -->
+
+    <h2 class="example">Test 3</h2>
+    <div class="example">&#x2013;42</div>
+    <!-- NVDA: Guion 42 -->
+    <!-- JAWS: Guion 42 -->
+  
+    <h2 class="example">Test 4</h2>
+    <div class="example">&#x2011;68</div>
+     <!-- VO: Fail -->
+  
+    <h2 class="example">Test 5</h2>
+    <div class="example">&#x2212;76</div>
+  
+    <h2 class="example">Test 6</h2>
+    <div class="example">&minus;22</div>
+  
+    <h2 class="example">Test 7</h2>
+    <div class="example"><span role="img" aria-label="menos 59">-59</span></div>
+  
+    <h2 class="example">Test 8</h2>
+    <div class="example"><span class="sr-only">Menos</span><span aria-hidden="true">-</span>78</div>
+
+    <h2 class="example">Test 9</h2>
+    <div class="example"><span>&#x2212;</span>78</div>
+
+    <h2 class="example">Test 10</h2>
+    <div class="example"><span>&minus;</span><span>10</span></div>
+
+    <h2 class="example">Test 11</h2>
+    <div class="example"><span>-</span><span>20</span></div>
+    <!-- JAWS: numero solo -->
+
+    <h2>Signo solo 1</h2>
+
+    <span>&minus;</span>
+
+    <h2>Signo solo 2</h2>
+
+    <span>&#x2212;</span>
+
+    <h2>Signo solo 3</h2>
+
+    <span class="price-tag-negative-symbol">-</span>
+    <!-- NVDA: nada -->
+    <!-- Talkback: guion -->
+
+
+   
+
+  </main>
+
+  <footer></footer>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Snackbar</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+
+    <style>
+        #msg4_1 {
+            display: none;
+        }
+
+        #msg4_2 {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Snackbar</h1>
+
+        <button id="open1">Open an alert 1</button>
+
+        <hr>
+
+        <button id="open2">Open an alert 2</button>
+        <div id="msg2">Mensaje del snackbar</div>
+
+        <hr>
+
+        <button id="open3">Open an alert 3</button>
+        <div aria-live="polite" id="msg3"></div>
+        <!-- Mas estable -->
+
+        <hr>
+
+        <button id="open4">Open an alert 4 a</button>
+        <div aria-live="assertive" id="msg4" style="display: none">Mensaje del snackbar</div>
+
+        <button id="open4_2">Open an alert 4 b</button>
+        <div aria-live="assertive" id="msg4_2">Mensaje del snackbar</div>
+        <style id="style4_2"></style>
+
+        <hr>
+
+        <button id="open5">Open an alert 5</button>
+        <div aria-live="assertive" id="msg5" hidden="">Mensaje del snackbar</div>
+
+        <hr>
+
+        <button id="open6">Open an alert 6</button>
+
+        <hr>
+
+        <button id="open7">Open an alert 7</button>
+
+
+    </main>
+
+    <footer></footer>
+
+    <script>
+
+        // Adding an element to the DOM dynamically
+        var open1 = document.getElementById("open1");
+
+        open1.addEventListener("click", function () {
+            open1.insertAdjacentHTML('afterend', '<div aria-live="assertive">Mensaje del snackbar</div>');
+        });
+
+        // Adding role=alert to an existing element
+        var open2 = document.getElementById("open2");
+        var msg2 = document.getElementById("msg2");
+
+        open2.addEventListener("click", function () {
+            msg2.setAttribute("aria-live", "assertive");
+        });
+
+        // Changing innerHTML of an existing element
+        var open3 = document.getElementById("open3");
+        var msg3 = document.getElementById("msg3");
+
+        open3.addEventListener("click", function () {
+            msg3.innerHTML = "Mensaje del snackbar.";
+        });
+
+        // Removing display: none
+        var open4 = document.getElementById("open4");
+        var msg4 = document.getElementById("msg4");
+
+        open4.addEventListener("click", function () {
+            msg4.style.display = "block";
+        });
+
+        // Variant: when set in stylesheet
+        //   var open4_1 = document.getElementById("open4_1");
+        //   var msg4_1 = document.getElementById("msg4_1");
+
+        //   open4_1.addEventListener("click", function() {
+        //     msg4_1.style.display = "block";
+        //   });
+
+        // Variant: set in CSS rather than JS
+        var open4_2 = document.getElementById("open4_2");
+        var style4_2 = document.getElementById("style4_2");
+
+        open4_2.addEventListener("click", function () {
+            style4_2.innerHTML = "#msg4_2 { display: block; }";
+        });
+
+        // Removing the hidden attribute
+        var open5 = document.getElementById("open5");
+        var msg5 = document.getElementById("msg5");
+
+        open5.addEventListener("click", function () {
+            msg5.removeAttribute("hidden");
+        });
+        
+        // Adding an role="status" element to the DOM dynamically
+        var open6 = document.getElementById("open6");
+
+        open6.addEventListener("focus", function () {
+            open6.insertAdjacentHTML('afterend', '<div role="status" id="contenedor">Hola Hola HOla</div>');
+        });
+
+        var open7 = document.getElementById("open7");
+        open7.addEventListener("click", function () {
+            open7.setAttribute("aria-describedby", "Esto es un tooltip");
+        });
+    </script>
+
+
+</body>
+
+</html>
