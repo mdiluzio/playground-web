@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>A2C</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>A2C</h1>
+    </header>
+
+    <main id="contenido">
+        <h2>Stock disponible</h2>
+        <p>Puede comprar hasta 15 unidades</p>
+        <div role="group" aria-labelledby="carrito">
+            <button aria-label="Quitar" onclick="restar();">-</button>
+            <div aria-live="polite" role="status" aria-atomic="true" id="carrito"><span id="cantidad">1</span> productos en su
+                carrito</div>
+            <button aria-label="Agregar" onclick="sumar();">+</button>
+        </div>
+
+        <script>
+
+            function sumar() {
+                var cantidad, suma;
+                cantidad = document.getElementById("cantidad").innerHTML;
+                suma = Number(cantidad) + 1 ;
+                document.getElementById("cantidad").innerHTML = suma;
+            }
+
+            function restar() {
+                var cantidad, suma;
+                cantidad = document.getElementById("cantidad").innerHTML;
+                suma = Number(cantidad) - 1;
+                document.getElementById("cantidad").innerHTML = suma;
+            }
+
+        </script>
+
+
+
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
