@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Progress bar</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li>Inicio</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Encabezado principal h1</h1>
+
+
+        <div class="andes-story-container">
+            <div class="andes-datepicker andes-datepicker--input andes-datepicker--multiple">
+                <div class="andes-datepicker__input">
+                    <div class="andes-form-control andes-form-control--textfield andes-form-control--default">
+                        <label><span class="andes-form-control__label">Select a day</span>
+                            <div class="andes-form-control__control">
+                                <input readonly="" rows="1" class="andes-form-control__field" maxlength="120"
+                                    value="" aria-describedby="fechas">
+                                    <input hidden readonly="" rows="1" class="andes-form-control__field" maxlength="120"
+                                    value="2021-12-01,2021-12-03">
+                              
+                            </div>
+                        </label>
+                        <div id="fechas" class="andes-form-control__embedded"><span class="andes-datepicker__input-value">
+                            <div class="andes-tag-collapsed">
+                                <div
+                                    class="andes-tag andes-tag--small andes-tag__color--default andes-tag--selectable">
+                                    <div class="andes-tag__label">1 dic 2021</div>
+                                </div>
+                                <div
+                                    class="andes-tag andes-tag--small andes-tag__color--default andes-tag--selectable">
+                                    <div class="andes-tag__label">3 dic 2021</div>
+                                </div>
+                            </div>
+                        </span>
+                        <span class="andes-datepicker__input-icon"><svg width="20px" height="20px"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M6.36 2.195l-.001 1.199h7.201V2.195h1.2v1.199l3.04.001v14.4H2.2v-14.4l2.959-.001V2.195h1.2zm10.239 5.999h-13.2l.001 8.401h13.2l-.001-8.401zm-11.44-3.6L3.4 4.595l-.001 2.399h13.2l.001-2.399-1.84-.001v1.201h-1.2V4.594H6.359v1.201h-1.2V4.594z"
+                                    fill="#000" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    fill-opacity="0.9"></path>
+                            </svg></span>
+                    </div>
+                        <div class="andes-form-control__bottom"><span class="andes-form-control__message">message</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comment-simplebox-text" role="textbox" aria-multiline="true"></div>
+    </main>
+
+    <footer></footer>
+
+
+
+</body>
+
+</html>
