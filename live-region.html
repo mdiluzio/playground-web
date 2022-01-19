@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>aria-live</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+
+    <div id="update"></div>
+
+    <button onclick="agregar();">Agregar live region en orden</button>
+
+    <script>
+
+        var $update = $('#update');
+
+
+        function agregar() {
+            $update.append('<div id="cambio" role="status" aria-live="polite"></div>');
+            setTimeout(actualizar, 100);
+        }
+        function actualizar() {
+            var $cambio = $('#cambio');
+            $cambio.append('<span>Hola Hola Hola</span>');
+
+        }
+
+
+    </script>
+    
+</body>
+
+</html>

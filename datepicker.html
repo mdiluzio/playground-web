@@ -66,6 +66,31 @@
             </div>
         </label>
 
+        <p>Enfoque listas input hidden</p>
+
+        <label><span class="andes-form-control__label">Select a day</span>
+            <div class="andes-form-control__control">
+                <div class="andes-form-control__embedded"><span class="andes-datepicker__input-value">
+                        <div class="andes-tag-collapsed" role="list" aria-label="Fechas seleccionadas" role="status">
+                            <div role="listitem" class="andes-tag andes-tag--small andes-tag__color--default andes-tag--selectable">
+                                <div class="andes-tag__label">11 Dec 2021</div>
+                            </div>
+                            <div role="listitem" class="andes-tag andes-tag--small andes-tag__color--default andes-tag--selectable">
+                                <div class="andes-tag__label">10 Dec 2021</div>
+                            </div>
+                        </div>
+                    </span><span class="andes-datepicker__input-icon" role="button" aria-expanded="false" tabindex="0"
+                        aria-label="Calendario"><svg width="20px" height="20px" viewBox="0 0 20 20">
+                            <path
+                                d="M6.36 2.195l-.001 1.199h7.201V2.195h1.2v1.199l3.04.001v14.4H2.2v-14.4l2.959-.001V2.195h1.2zm10.239 5.999h-13.2l.001 8.401h13.2l-.001-8.401zm-11.44-3.6L3.4 4.595l-.001 2.399h13.2l.001-2.399-1.84-.001v1.201h-1.2V4.594H6.359v1.201h-1.2V4.594z"
+                                fill="#000" fill-rule="nonzero" stroke="none" stroke-width="1" fill-opacity="0.9">
+                            </path>
+                        </svg></span></div>
+            </div>
+        </label>
+         <!-- input procesable -->
+    <input hidden rows="1" class="andes-form-control__field" maxlength="120" value="2021-12-11,2021-12-10">
+
         <h2>Single</h2>
 
         <label><span class="andes-form-control__label">Select a day</span>
@@ -88,7 +113,7 @@
         </label>
     </main>
 
-    <p>Enfoque doble input</p>
+    <p>Enfoque doble input uno hidden</p>
     <label><span class="andes-form-control__label">Select a day</span>
         <div class="andes-form-control__control"><input readonly rows="1" class="andes-form-control__field"
                 maxlength="120" value="11 de diciembre de 2021">
@@ -107,6 +132,7 @@
     <!-- input procesable -->
     <input hidden rows="1" class="andes-form-control__field" maxlength="120" value="2021-12-11">
 
+  
 
 
 
