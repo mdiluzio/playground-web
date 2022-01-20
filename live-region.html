@@ -24,11 +24,12 @@
         function agregar() {
             $update.append('<div id="cambio" role="status" aria-live="polite"></div>');
             $update.append('<div id="cambio2" role="status" aria-live="polite">Chau Chau Chau</div>'); //no anda en NVDA
-            setTimeout(actualizar, 0); //puede contener algunos ms
+            $update.append('<div id="cambio3" role="status" aria-live="polite" aria-label="Pepe pepe pepe"></div>'); 
+            setTimeout(actualizar, 10); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
-            $cambio.append('<span>Hola Hola Hola</span>'); //anda en NVDA
+            $cambio.append('<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>'); //anda en NVDA
 
         }
 
