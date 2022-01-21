@@ -35,26 +35,17 @@
 
         <div class="ui-search-item__group ui-search-item__group--reviews">
             <div class="ui-search-reviews ui-search-item__group__element">
+                <h2>Enfoque sr-only</h2>
                 <span class="sr-only-meli">Calificación 4.5 de 5.</span>
-                <span class="ui-search-reviews__ratings" aria-hidden="true">
-                    <svg class="ui-search-icon ui-search-icon--star ui-search-icon--star-full" width="100%"
-                        height="100%" viewBox="0 0 10 10" fill="#3483fa">
-                        <use href="#start-full"></use>
-                    </svg><svg class="ui-search-icon ui-search-icon--star ui-search-icon--star-full" width="100%"
-                        height="100%" viewBox="0 0 10 10" fill="#3483fa">
-                        <use href="#start-full"></use>
-                    </svg><svg class="ui-search-icon ui-search-icon--star ui-search-icon--star-full" width="100%"
-                        height="100%" viewBox="0 0 10 10" fill="#3483fa">
-                        <use href="#start-full"></use>
-                    </svg><svg class="ui-search-icon ui-search-icon--star ui-search-icon--star-full" width="100%"
-                        height="100%" viewBox="0 0 10 10" fill="#3483fa">
-                        <use href="#start-full"></use>
-                    </svg><svg class="ui-search-icon ui-search-icon--star ui-search-icon--star-half" width="100%"
-                        height="100%" viewBox="0 0 10 10" fill="#3483fa">
-                        <use href="#start-half"></use>
-                    </svg>
-                </span>
-                <div class="ui-search-reviews__amount">119 <span class="sr-only-meli">opiniones</span></div>
+                <div class="ui-search-reviews__ratings" aria-hidden="true">
+                    <img src="estrellas.png" alt="" />
+                </div>
+                <h2>Enfoque img aria-label</h2>
+                <div class="ui-search-reviews__ratings" role="img" aria-label="Calificación 4.5 de 5">
+                    <img aria-hidden="true" src="estrellas.png" alt="SVG" />
+                </div>
+                <h2>Contexto opiniones con sr-only</h2>
+                <div class="ui-search-reviews__amount">119 <span class="sr-only-meli">opiniones.</span></div>
             </div>
         </div>
 
