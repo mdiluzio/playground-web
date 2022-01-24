@@ -36,22 +36,24 @@
         var $update = $('#update');
 
         function agregar() {
-            $update.append('<div id="cambio" role="status" aria-live="polite" aria-atomic="true"></div>');
+            $update.append('<div id="cambio" role="status" aria-live="polite"></div>');
             setTimeout(actualizar, 10); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
-            $cambio.append('<div id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Validando datos">SVG</div>'); //anda en NVDA
+            $cambio.append('<div id="progress" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-label="Validando datos">SVG</div>'); //anda en NVDA
+            $cambio.append('<div id="anuncio"></div>'); //anda en NVDA
         }
         var $i=10;
         function cambiar() {
             var $cambio = $('#cambio');
+            var $anuncio = $('#anuncio');
             var $progress = $('#progress');
             $progress.attr("aria-valuenow",$i);
-            $progress.attr("aria-valuetext",$i + " cargado.");
+            $anuncio.html($i + ' cargado.</div>');               
             $i=$i+10;
             if ($i==100) {
-                $cambio.append('<div class="sr-only-meli">Terminado</div>');               
+                $anuncio.html('Terminado');               
             }
         }
 
