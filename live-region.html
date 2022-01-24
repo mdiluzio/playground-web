@@ -5,6 +5,20 @@
     <title>aria-live</title>
     <meta charset="utf-8">
 
+    <style>
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -15,27 +29,30 @@
     <div id="update"></div>
 
     <button onclick="agregar();">Agregar live region en orden</button>
+    <button onclick="cambiar();">Actualizar valores de a 10</button>
 
     <script>
 
         var $update = $('#update');
 
-
         function agregar() {
-            $update.append('<div id="cambio" role="status" aria-live="polite"></div>');
+            $update.append('<div id="cambio" role="status" aria-live="polite" aria-atomic="true"></div>');
             setTimeout(actualizar, 10); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
-            $cambio.append('<div id="progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Cargando">SVG</div>'); //anda en NVDA
-            setTimeout(cambiar,2000);
+            $cambio.append('<div id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Validando datos">SVG</div>'); //anda en NVDA
         }
-
+        var $i=10;
         function cambiar() {
+            var $cambio = $('#cambio');
             var $progress = $('#progress');
-            $progress.attr("aria-valuenow","100")
-            $progress.attr("aria-label","Terminado")
-           
+            $progress.attr("aria-valuenow",$i);
+            $progress.attr("aria-valuetext",$i + " cargado.");
+            $i=$i+10;
+            if ($i==100) {
+                $cambio.append('<div class="sr-only-meli">Terminado</div>');               
+            }
         }
 
     </script>
