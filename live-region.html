@@ -36,14 +36,13 @@
         var $update = $('#update');
 
         function agregar() {
-            $update.append('<div id="cambio" role="status" aria-live="polite"></div>');            
-            $update.append('<div id="progress" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-label="Validando datos">SVG</div>'); //anda en NVDA
-
+            $update.append('<div id="cambio" role="status" aria-live="polite"></div>');
             setTimeout(actualizar, 10); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
             $cambio.append('<div id="anuncio"></div>');
+            $cambio.append('<div id="progress" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-label="Verificando">SVG</div>'); //anda en NVDA
         }
         var $i=10;
         function cambiar() {
