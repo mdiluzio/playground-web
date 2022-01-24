@@ -23,18 +23,18 @@
 
         function agregar() {
             $update.append('<div id="cambio" role="status" aria-live="polite"></div>');
-            $update.append('<div id="cambio2" role="status" aria-live="polite">Sin secuencia</div>'); //no anda en NVDA
-            $update.append('<div id="cambio3" role="status" aria-live="polite" aria-label="aria-label"></div>'); 
             setTimeout(actualizar, 10); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
-            $cambio.append('<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">Progressbar</div>'); //anda en NVDA
+            $cambio.append('<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="Progressbar">aria-label</div>'); //anda en NVDA
+            $cambio.append('<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">progressbar</div>'); //anda en NVDA
             $cambio.append('<div>Secuencial</div>'); //anda en NVDA
 
         }
 
     </script>
+
 
 </body>
 

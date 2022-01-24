@@ -69,48 +69,7 @@ aria-busy="false" aria-label="Cargando">
             <circle role="figure" class="andes-pi__circle andes-pi__circle--animation-ease"
                 stroke-dasharray="38.44, 124" cx="25" cy="25" r="20" fill="none"></circle>
         </svg>
-
-        <h2>ProgressIndicatorCircular sin aria-label</h2>
-
-        <div class="andes-form-control__countdown" role="progressbar" aria-valuenow="31" aria-valuemin="0"
-            aria-valuemax="100" id="progress"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="220"
-                height="170" viewBox="-10 -10 220 170">
-                <circle cx="100" cy="75" r="50" fill="mediumseagreen" />
-                <circle cx="100" cy="75" r="75" fill="white" stroke="red" />
-            </svg></div>
-
-        <h2>ProgressIndicatorCircular con aria-label</h2>
-
-        <div class="andes-form-control__countdown" aria-label="Cargando 1 2 3" role="progressbar" aria-valuenow="10"
-            aria-valuemin="0" aria-valuemax="100" id="progress">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                width="220" height="170" viewBox="-10 -10 220 170">
-                <circle cx="100" cy="75" r="50" fill="mediumseagreen" />
-                <circle cx="100" cy="75" r="75" fill="white" stroke="red" />
-            </svg></div>
-
-
-
-        <h2>role progressbar</h2>
-
-        <div class="andes-story-container">
-            <label
-                class="andes-form-control andes-form-control--textfield andes-form-control--countdown andes-form-control--default demo-textfield"><span
-                    class="andes-form-control__label">Default</span>
-                <div class="andes-form-control__control">
-                    <input onkeypress="show();" rows="1" class="andes-form-control__field" maxlength="25"
-                        id="textfield-default" aria-invalid="false"
-                        aria-describedby="textfield-default-message progress" value="">
-                </div>
-            </label>
-            <div class="andes-form-control__bottom">
-                <span id="textfield-default-message" class="andes-form-control__message">Algún texto de ayuda</span>
-                <span class="andes-form-control__countdown" aria-label="Máximo 25 caracteres" role="progressbar"
-                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="25" id="progress">0 / 25</span>
-                <span id="count" class="sr-only-meli" aria-live="polite" aria-atomic="true"></span>
-            </div>
-        </div>
-
+        
         <h2>Aria hidden y sr-only</h2>
 
         <div class="andes-story-container">
