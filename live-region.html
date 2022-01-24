@@ -50,7 +50,7 @@
             var $anuncio = $('#anuncio');
             var $progress = $('#progress');
             $progress.attr("aria-valuenow",$i);
-            $anuncio.html($i + ' %.</div>');               
+            $anuncio.html('sr-only: ' + $i + ' %.</div>');               
             $i=$i+10;
             if ($i==100) {
                 $anuncio.html('sr-only: Terminado');               
