@@ -42,8 +42,8 @@
         var $update = $('#update');
 
         function agregar() {
-            $update.append('<div id="cambio" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-valuetext="0% cargando" aria-label="aria-label" aria-live="polite" aria-atomic="true">SVG</div>');
-            setTimeout(actualizar, 10); //puede contener algunos ms
+            $update.append('<div id="cambio" aria-live="polite" aria-atomic="true">no secuencial</div>');
+            //setTimeout(actualizar, 10); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
