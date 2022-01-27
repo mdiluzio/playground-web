@@ -29,7 +29,7 @@
     <div id="update"></div>
 
     <button onclick="agregar();">Agregar live region en orden</button>
-    <button onclick="cambiar();">Actualizar valores de a 10</button>
+    <button onclick="cambiar();">Cambiar valores de a 10</button>
 
     <h2>img role="progressbar"</h2>
     <img role="progressbar" src="spinner.gif" alt="Loading" aria-valuemin="0" aria-valuenow="20" aria-valuemax="100">
@@ -42,12 +42,12 @@
         var $update = $('#update');
 
         function agregar() {
-            $update.append('<div id="cambio" role="status" aria-live="polite" aria-atomic="true"></div>');
+            $update.append('<div id="cambio" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-valuetext="0% cargando" aria-label="aria-label" aria-live="polite" aria-atomic="true">SVG</div>');
             setTimeout(actualizar, 10); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
-            $cambio.append('<div id="progress" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-valuetext="0% cargando" aria-label="aria-label">Cargando</div>'); //anda en NVDA
+            $cambio.append('<div>Dato nuevo</div>');
         }
         var $i = 10;
         function cambiar() {
