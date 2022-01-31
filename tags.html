@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Stars</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <main>
+
+        <ul>
+            <li aria-setsize="4" tabindex="0">
+                <div>tag 1</div>
+            </li>
+            <li aria-setsize="4" tabindex="0">
+                <div>tag 2</div>
+            </li>
+            <li id="mas" role="none"><button onclick="agregar()">Agregar</button></li>
+        </ul>
+
+    </main>
+
+    <footer></footer>
+
+    <script>
+
+    var $mas = $('#mas');
+
+    function agregar() {
+        $mas.after('<li tabindex="0" aria-setsize="4"><div>tag 3</div></li><li tabindex="0" aria-setsize="4"><div>tag 4</div></li>');
+    }
+</script>
+</body>
+
+</html>
