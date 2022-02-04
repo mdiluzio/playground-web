@@ -33,30 +33,52 @@
         <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
     </header>
 
-    <main>
+    <div><h1 id="header" aria-live="true">April 2022</h1><button aria-expanded="false" aria-label="Select month and year"
+    class="andes-datepicker__navbar-button--center">Flecha</button></div>
 
-        <ul>
-            <li aria-setsize="4" tabindex="0">
-                <div>tag 1</div>
-            </li>
-            <li aria-setsize="4" tabindex="0">
-                <div>tag 2</div>
-            </li>
-            <li id="mas" role="none"><button onclick="agregar()">Agregar</button></li>
-        </ul>
+        <main>
 
-    </main>
+           
 
-    <footer></footer>
+                <ul aria-label="{4} fechas seleccionadas">
+                    <li>
+                        <div>tag 1</div>
+                        <button>x</button>
+                    </li>
+                    <li>
+                        <div>tag 2</div>
+                        <button>x</button>
+                    </li>
+                    <li>
+                        <button>+3</button>
+                    </li>
+                    <li>
+                        <div>tag 3</div>
+                        <button>x</button>
+                    </li>
+                    <li>
+                        <div>tag 4</div>
+                        <button>x</button>
+                    </li>
+                    </div>
+                </ul>
 
-    <script>
+        </main>
 
-    var $mas = $('#mas');
+        <footer></footer>
 
-    function agregar() {
-        $mas.after('<li tabindex="0" aria-setsize="4"><div>tag 3</div></li><li tabindex="0" aria-setsize="4"><div>tag 4</div></li>');
-    }
-</script>
+        <script>
+
+            var $mas = $('#mas');
+
+            function agregar() {
+                $mas.attr("class", "");
+                $mas.attr("aria-hidden", false)
+            }
+            function cerrar() {
+                $mas.attr("class", "sr-only-meli");
+            }
+        </script>
 </body>
 
 </html>
