@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Listas</title>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        .andes-visually-hidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <main id="contenido">
+
+
+        <h1>focus sr mobile</h1>
+
+        <div tabindex="-1" onfocus="foco(1);">Un div con tabindex="-1"</div>
+        <div tabindex="0" onfocus="foco(2);">Un div con tabindex="0"</div>
+        <button onfocus="foco(3);">Boton</button>
+
+        <script>
+
+
+            function foco(opcion) {
+                if (opcion == 1) console.log('Un div con tabindex="-1"');
+                if (opcion == 2) console.log('Un div con tabindex="0"');
+                if (opcion == 3) console.log('Botón');
+
+
+            }
+
+
+
+        </script>
+
+
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
