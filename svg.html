@@ -32,6 +32,8 @@
     <main>
 
         <h1>SVG v2</h1>
+
+        <h2>svg con role y aria-label</h2>
         <div class="andes-badge andes-badge--notification andes-badge--neutral">
             <svg role="img" aria-label="Error" class="andes-badge__icon" xmlns="http://www.w3.org/2000/svg" width="16"
                 height="16" viewBox="0 0 16 16">
@@ -43,6 +45,41 @@
                     </g>
                 </g>
             </svg>
+        </div>
+        <h2>sr-only</h2>
+        <div class="andes-badge andes-badge--notification andes-badge--neutral">
+            <span class="sr-only-meli">Error: </span>
+            <svg aria-hidden="true" class="andes-badge__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16">
+                <g fill="none" fill-rule="evenodd">
+                    <g transform="matrix(1 0 0 -1 0 16)">
+                        <path d="M7.03 3.879h1.94l-.243 5.333H7.273z" class="andes-badge__icon-inner"></path>
+                        <circle cx="8" cy="11.152" r="1" transform="matrix(1 0 0 -1 0 22.303)"
+                            class="andes-badge__icon-inner"></circle>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
+        <div class="andes-tag andes-tag--large andes-tag__color--error">
+            <div class="andes-tag__avatar" aria-hidden="true">
+                <div class="andes-tag__avatar-icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" viewBox="0 0 16 16">
+                        <path fill="#000" fill-opacity=".45" fill-rule="nonzero"
+                            d="M10.838 8.313l3.76 1.254V12.8a1.8 1.8 0 0 1-1.8 1.8h-.8C6.146 14.6 1.4 9.854 1.4 4v-.8a1.8 1.8 0 0 1 1.8-1.8h3.232l1.256 3.763-1.08 1.078A3.4 3.4 0 0 0 9.76 9.391l1.08-1.078zm-.591 2.287h-.248a4.6 4.6 0 0 1-4.6-4.6v-.25l.914-.912L5.567 2.6H3.199a.6.6 0 0 0-.6.6V4a9.4 9.4 0 0 0 9.4 9.4h.8a.6.6 0 0 0 .6-.6v-2.368l-2.237-.746-.915.914z">
+                        </path>
+                    </svg></div>
+            </div>
+            <div class="andes-tag__label"><span class="sr-only-meli">Error: </span>
+                Call now</div>
+            <button type="button" class="andes-tag__close"
+                aria-label="Cerrar Tag"><svg class="andes-tag__close-icon andes-tag__svg-fill" width="16" height="16"
+                    viewBox="0 0 16 16">
+                    <path transform="translate(3 3)" fill-opacity="1"
+                        d="M8.594.552l.855.842L5.87 5.022 9.45 8.6l-.849.848-3.572-3.572-3.521 3.572-.855-.842L4.18 5.028.552 1.4l.849-.848 3.621 3.62L8.594.553z">
+                    </path>
+            </svg>
+        </button>
         </div>
 
 
