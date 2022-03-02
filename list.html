@@ -2,56 +2,67 @@
 <html lang="es">
 
 <head>
-    <title>listas</title>
-    <meta charset="utf-8">
-   
+  <title>listas</title>
+  <meta charset="utf-8">
+
+  <style>
+    .andes-visually-hidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1;
+        margin: 0 -1px -1px 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1;
+    }
+</style>
+
 
 </head>
 
 <body>
 
-    <header>
-        <h1>listas</h1>
+  <h1>Listas</h1>
+  <h2>Ideas</h2>
+  <input type="radio" name="uno" aria-labelledby="primary1">
+  <div class="primary" id="primary1">Primario</div>
+  <div class="secondary1" id="secondary1">Secundario</div>
+  <div class="tertiary1" id="tertiary1">
+    <button>Tertiary</button>
+  </div>
 
-    </header>
+  <input type="radio" name="uno" aria-labelledby="primary2">
+  <div class="primary" id="primary2">Primario</div>
+  <div class="secondary">Secundario</div>
+  <div class="tertiary">Terciario</div>
 
-    <main id="contenido">
+  <h2>Andes actual</h2>
 
-        <form>
+  <div
+    class="andes-list__item andes-list__item--size-medium andes-list__item-with-secondary andes-list__item-with-selection-component"
+    id="radio-list-example-id-option-0" data-key="0">
+    <div class="andes-visually-hidden">Lorem Ipsum,Lorem Ipsum,Tertiary</div>
+    <div class="andes-list__item-selection-control" aria-hidden="true">
+      <div class="andes-radio andes-radio--default">
+        <div class="andes-radio-element"><input type="radio" class="andes-radio__input"
+            id="radio-list-example-id-option-0-0" name="radio-name" aria-checked="false" tabindex="-1" value="0">
+          <div class="andes-radio__background">
+            <div class="andes-radio__outer-circle"></div>
+            <div class="andes-radio__inner-circle"></div>
+          </div>
+        </div><label class="andes-radio__label" for="radio-list-example-id-option-0-0"><span>Lorem Ipsum</span></label>
+      </div>
+    </div>
+    <div class="andes-list__item-first-column">
+      <div class="andes-list__item-text"><span class="andes-list__item-primary" aria-hidden="true">Lorem
+          Ipsum</span><span class="andes-list__item-secondary" aria-hidden="true">Lorem Ipsum</span></div>
+    </div>
+    <div class="andes-list__item-second-column"><span
+        class="andes-list__item-tertiary andes-list__item-tertiary--centered" aria-hidden="true">Tertiary</span></div>
+    </div>
 
-     <label>Nombre:
-
-        <input type="text" required />
-    
-
-     </label>
-     <input type="submit" value="enviar" />
-
-     <div class="button" role="button" tabindex="0">Botón</div>
-
-     <button>Botón</button>
-     
-
-    </form>
-
-    <form>
-        <div class="group">
-          <input type="text">
-          <label>Normal</label>
-        </div>
-
-        <div class="group">
-          <input type="text" required="required">
-          <label>Required</label>
-        </div>
-        <input type="submit">
-      </form>
-     
-
-    </main>
-
-
-    <footer></footer>
 </body>
 
 </html>
