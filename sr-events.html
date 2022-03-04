@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Events</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="deque-patterns.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        .sr-only-meli {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+    </header>
+
+    <main>
+
+        <h1>Events</h1>
+
+        <a href="#" id="enlace">Esto es un enlace</a>
+
+        <script>
+            const enlace = document.getElementById('enlace');
+            enlace.addEventListener('focusin', (event) => {
+               console.log("Capturado por focusin");
+            });
+            enlace.addEventListener('focusout', (event) => {
+                console.log("Capturado por focusout");
+            });
+            enlace.addEventListener('focus', (event) => {
+                console.log("Capturado por focus");
+            });
+        </script>
+
+
+
+
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
