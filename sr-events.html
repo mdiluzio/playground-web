@@ -33,35 +33,12 @@
 
         <h1>Events</h1>
 
-        <a href="#" id="enlace">Esto es un enlace</a>
         <a href="#" id="enlace2">Esto es un enlace 2</a>
 
         
 
         <script>
-            const enlace = document.getElementById('enlace');
-            enlace.addEventListener('focusin', (event) => {
-               console.log("Capturado por focusin");
-            });
-            enlace.addEventListener('focusout', (event) => {
-                console.log("Capturado por focusout");
-            });
-            enlace.addEventListener('focus', (event) => {
-                console.log("Capturado por focus");
-            });
-            enlace.addEventListener('scroll', (event) => {
-                console.log("Capturado por scroll");
-            });
-            enlace.addEventListener('touchstart', (event) => {
-                console.log("Capturado por touchstart");
-            });
-            enlace.addEventListener('touch', (event) => {
-                console.log("Capturado por touch");
-            });
-            enlace.addEventListener('touchend', (event) => {
-                console.log("Capturado por touchend");
-            });
-
+       
             const enlace2 = document.getElementById('enlace2');
             enlace2.addEventListener('focusin', (event) => {
                console.log("Capturado por focusin");
@@ -83,6 +60,12 @@
             });
             enlace2.addEventListener('touchend', (event) => {
                 console.log("Capturado por touchend");
+            });
+            enlace2.addEventListener('onmouseover', (event) => {
+                console.log("Capturado por onmouseover");
+            });
+            enlace2.addEventListener('onselect', (event) => {
+                console.log("Capturado por onselect");
             });
         </script>
 
