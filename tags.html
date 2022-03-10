@@ -9,7 +9,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <style>
-        .sr-only-meli {
+        .sr-only {
             border: 0;
             clip: rect(0 0 0 0);
             clip-path: inset(50%);
@@ -30,55 +30,44 @@
 <body>
 
     <header>
-        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
     </header>
 
-    <div><h1 id="header" aria-live="true">April 2022</h1><button aria-expanded="false" aria-label="Select month and year"
-    class="andes-datepicker__navbar-button--center">Flecha</button></div>
+    <main>
+        <ul aria-label="fechas seleccionadas">
+            <li>
+                <div>4 de Dic</div>
+            </li>
+            <li>
+                <div>3 de Nov</div>
+            </li>
+            <li role="none">
+                <button onclick="agregar();" aria-label="Mostrar 3 mas">+3</button>
+                <li>
+                    <div>6 de Sep</div>
+                </li>
+                <li>
+                    <div>13 de Ene</div>
+                </li>
+            </li>
+         
+        </ul>
 
-        <main>
+    </main>
 
-           
+    <footer></footer>
 
-                <ul aria-label="{4} fechas seleccionadas">
-                    <li>
-                        <div>tag 1</div>
-                        <button>x</button>
-                    </li>
-                    <li>
-                        <div>tag 2</div>
-                        <button>x</button>
-                    </li>
-                    <li>
-                        <button>+3</button>
-                    </li>
-                    <li>
-                        <div>tag 3</div>
-                        <button>x</button>
-                    </li>
-                    <li>
-                        <div>tag 4</div>
-                        <button>x</button>
-                    </li>
-                    </div>
-                </ul>
+    <script>
 
-        </main>
+        var $mas = $('#mas');
 
-        <footer></footer>
-
-        <script>
-
-            var $mas = $('#mas');
-
-            function agregar() {
-                $mas.attr("class", "");
-                $mas.attr("aria-hidden", false)
-            }
-            function cerrar() {
-                $mas.attr("class", "sr-only-meli");
-            }
-        </script>
+        function agregar() {
+            $mas.attr("class", "");
+            $mas.attr("aria-hidden", false)
+        }
+        function cerrar() {
+            $mas.attr("class", "sr-only-meli");
+        }
+    </script>
 </body>
 
 </html>
