@@ -40,15 +40,10 @@
             <li>
                 <div>3 de Nov</div>
             </li>
-            <li role="none">
-                <button onclick="agregar();" aria-label="Mostrar 3 mas">+3</button>
-                <li>
-                    <div>6 de Sep</div>
-                </li>
-                <li>
-                    <div>13 de Ene</div>
-                </li>
-            </li>
+           
+                <button id="agregar" onclick="ver();" aria-label="Mostrar 3 más">+3</button>
+                <li>28 de May</li>
+                <li>16 de Nov</li>
          
         </ul>
 
@@ -58,11 +53,10 @@
 
     <script>
 
-        var $mas = $('#mas');
+        var $agregar = $('#agregar');
 
-        function agregar() {
-            $mas.attr("class", "");
-            $mas.attr("aria-hidden", false)
+        function ver() {
+            $agregar.insertAfter("<li>hola</li>");
         }
         function cerrar() {
             $mas.attr("class", "sr-only-meli");
