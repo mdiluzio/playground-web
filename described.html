@@ -65,7 +65,7 @@
 
         var $trigger = $('#trigger');
 
-        trigger.addEventListener('focus', (event) => {
+        trigger.addEventListener('focusin', (event) => {
             console.log("Inserto el tooltip al dom");
             var $contenido = $('#contenido');
             $contenido.append('<div id="tooltip">Mensaje abierto</div>');
