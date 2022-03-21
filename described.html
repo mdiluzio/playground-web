@@ -24,6 +24,12 @@
     <main>
         <h1>aria-describedby dinámico</h1>
 
+        <h2>Prueba 0</h2>
+        <label>Nombre
+            <input id="open0" aria-describedby="pepe0" type="text">
+        </label>
+        <div id="pepe0">Mensaje del tooltip</div>
+
         <h2>Prueba 1</h2>
         <label>Nombre
             <input id="open1" aria-describedby="pepe" type="text">
@@ -68,7 +74,7 @@
         trigger.addEventListener('focus', (event) => {
             console.log("creo la referencia");
             trigger.setAttribute("aria-describedby", "tooltip");
-            console.log("Inserto el tooltip al dom");
+            console.log("Inserto el tooltip en el DOM");
             trigger.insertAdjacentHTML('afterend', '<div id="tooltip">Mensaje del tooltip</div>');
         });
 
