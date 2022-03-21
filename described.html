@@ -66,10 +66,12 @@
         var $trigger = $('#trigger');
 
         trigger.addEventListener('focusin', (event) => {
+            console.log("creo la referencia");
+            trigger.setAttribute("aria-describedby", "tooltip");
             console.log("Inserto el tooltip al dom");
             var $contenido = $('#contenido');
             $contenido.append('<div id="tooltip">Mensaje abierto</div>');
-         
+            trigger.focus();
         });
 
         function actualizar() {
