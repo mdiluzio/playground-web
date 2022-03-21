@@ -36,8 +36,8 @@
         </label>
         <!-- Genera inestabilidad -->
 
-        <h2>Prueba 3</h2>
-        <button id="trigger">Trigger</button>
+        <h2>Prueba 3 v2</h2>
+        <button id="trigger" aria-describedby="tooltip">Trigger</button>
         <div id="contenido"></div>
 
 
@@ -69,12 +69,12 @@
             console.log("Inserto el tooltip al dom");
             var $contenido = $('#contenido');
             $contenido.append('<div id="tooltip">Mensaje abierto</div>');
-            setTimeout(actualizar, 10); //puede contener algunos ms
+         
         });
 
         function actualizar() {
-            trigger.setAttribute("aria-describedby","tooltip");
-            console.log("Creo la referencia");
+           
+           
         }
 
     </script>
