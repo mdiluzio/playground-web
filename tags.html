@@ -8,23 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <style>
-        .sr-only {
-            border: 0;
-            clip: rect(0 0 0 0);
-            clip-path: inset(50%);
-            height: 1;
-            margin: 0 -1px -1px 0;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1;
-        }
 
-        ul {
-            list-style: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -33,19 +17,7 @@
     </header>
 
     <main>
-        <ul aria-label="fechas seleccionadas">
-            <li>
-                <div>4 de Dic</div>
-            </li>
-            <li>
-                <div>3 de Nov</div>
-            </li>
-           
-                <button id="agregar" onclick="ver();" aria-label="Mostrar 3 más">+3</button>
-                <li>28 de May</li>
-                <li>16 de Nov</li>
-         
-        </ul>
+     <ul class="andes-tag-collapsed" aria-label="Tags seleccionados"><li><div class="andes-tag andes-tag--large andes-tag__color--default"><div class="andes-tag__label">tag 1</div><button type="button" class="andes-tag__close" aria-label="quitar tag 1"><span aria-hidden="true" class="andes-tag__icon-container"><svg class="andes-tag__close-icon andes-tag__svg-fill" width="16" height="16" viewBox="0 0 16 16"><path transform="translate(3 3)" fill-opacity="0.45" d="M8.594.552l.855.842L5.87 5.022 9.45 8.6l-.849.848-3.572-3.572-3.521 3.572-.855-.842L4.18 5.028.552 1.4l.849-.848 3.621 3.62L8.594.553z"></path></svg></span></button></div></li><li><div class="andes-tag andes-tag--large andes-tag__color--default"><div class="andes-tag__label">tag 2</div><button type="button" class="andes-tag__close" aria-label="quitar tag 2"><span aria-hidden="true" class="andes-tag__icon-container"><svg class="andes-tag__close-icon andes-tag__svg-fill" width="16" height="16" viewBox="0 0 16 16"><path transform="translate(3 3)" fill-opacity="0.45" d="M8.594.552l.855.842L5.87 5.022 9.45 8.6l-.849.848-3.572-3.572-3.521 3.572-.855-.842L4.18 5.028.552 1.4l.849-.848 3.621 3.62L8.594.553z"></path></svg></span></button></div></li><li class="andes-tag-collapsed__wrap"><button aria-haspopup="dialog" aria-expanded="true" class="andes-tag andes-tag--large andes-tag--selectable andes-tag--clickable" aria-label="mostrar 3 mas"><span class="andes-tag__label">+3</span></button><div data-tippy-root="" id="tippy-1" style="z-index: 9999; position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 38px, 0px);"><div data-testid="floating-menu" class="andes-card andes-card--flat andes-card--default andes-floating-menu andes-card--padding-0"><div class="andes-card__content"><div class="andes-tag-collapsed__more" role="dialog"><ul><li><div class="andes-tag andes-tag--large andes-tag__color--default"><div class="andes-tag__label">tag 3</div><button type="button" class="andes-tag__close" aria-label="quitar tag 3"><span aria-hidden="true" class="andes-tag__icon-container"><svg class="andes-tag__close-icon andes-tag__svg-fill" width="16" height="16" viewBox="0 0 16 16"><path transform="translate(3 3)" fill-opacity="0.45" d="M8.594.552l.855.842L5.87 5.022 9.45 8.6l-.849.848-3.572-3.572-3.521 3.572-.855-.842L4.18 5.028.552 1.4l.849-.848 3.621 3.62L8.594.553z"></path></svg></span></button></div></li><li><div class="andes-tag andes-tag--large andes-tag__color--default"><div class="andes-tag__label">tag 4</div><button type="button" class="andes-tag__close" aria-label="quitar tag 4"><span aria-hidden="true" class="andes-tag__icon-container"><svg class="andes-tag__close-icon andes-tag__svg-fill" width="16" height="16" viewBox="0 0 16 16"><path transform="translate(3 3)" fill-opacity="0.45" d="M8.594.552l.855.842L5.87 5.022 9.45 8.6l-.849.848-3.572-3.572-3.521 3.572-.855-.842L4.18 5.028.552 1.4l.849-.848 3.621 3.62L8.594.553z"></path></svg></span></button></div></li><li><div class="andes-tag andes-tag--large andes-tag__color--default"><div class="andes-tag__label">tag 5</div><button type="button" class="andes-tag__close" aria-label="quitar tag 5"><span aria-hidden="true" class="andes-tag__icon-container"><svg class="andes-tag__close-icon andes-tag__svg-fill" width="16" height="16" viewBox="0 0 16 16"><path transform="translate(3 3)" fill-opacity="0.45" d="M8.594.552l.855.842L5.87 5.022 9.45 8.6l-.849.848-3.572-3.572-3.521 3.572-.855-.842L4.18 5.028.552 1.4l.849-.848 3.621 3.62L8.594.553z"></path></svg></span></button></div></li></ul></div></div></div></div></li></ul>
 
     </main>
 

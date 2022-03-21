@@ -4,6 +4,9 @@
 <head>
     <title>Described</title>
     <meta charset="utf-8">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,6 +36,12 @@
         </label>
         <!-- Genera inestabilidad -->
 
+        <h2>Prueba 3</h2>
+        <button id="trigger">Trigger</button>
+        <div id="contenido"></div>
+
+
+
     </main>
 
     <footer></footer>
@@ -52,6 +61,22 @@
             open2.setAttribute("aria-describedby", "pepe2");
             open2.insertAdjacentHTML('afterend', '<div hidden id="pepe2">Mensaje del tooltip</div>');
         });
+
+
+        var $trigger = $('#trigger');
+
+        trigger.addEventListener('focus', (event) => {
+            console.log("Inserto el tooltip al dom");
+            var $contenido = $('#contenido');
+            $contenido.append('<div id="tooltip">Mensaje abierto</div>');
+            setTimeout(actualizar, 10); //puede contener algunos ms
+        });
+
+        function actualizar() {
+            trigger.setAttribute("aria-describedby","tooltip");
+            console.log("Creo la referencia");
+        }
+
     </script>
 
 </body>

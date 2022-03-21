@@ -7,6 +7,18 @@
         ul {
             list-style: none;
         }
+
+        .andes-visually-hidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
     </style>
 
 </head>
@@ -18,6 +30,56 @@
     </header>
 
     <main id="contenido">
+
+        <h2>Dropdown</h2>
+        <div class="andes-button-dropdown-container" aria-expanded="true">
+            <button type="button" class="andes-button andes-button-dropdown andes-button--large andes-button--loud"
+                aria-haspopup="true" aria-expanded="true" aria-label="Pagar">
+                <span class="andes-button__content"><span class="andes-button__text">Pagar</span><svg width="20px"
+                        height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <title>Cerrar menú de opciones</title>
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.8">
+                            <polygon class="andes-button-dropdown__svg-fill" fill-rule="nonzero"
+                                transform="translate(10.001873, 9.995000) rotate(90.000000) translate(-10.001873, -9.995000) "
+                                points="8.45008885 9.99250228 13.2457181 5.19687305 12.3971899 4.34834491 6.75303257 9.99250228 12.4021854 15.6416551 13.2507135 14.793127">
+                            </polygon>
+                        </g>
+                    </svg></span>
+            </button>
+        </div>
+
+        <ul class="andes-button-dropdown--menu andes-button-dropdown--menu-bottom" role="menu"
+            instance="[object Object]">
+            <li role="none"><a role="menuitem" href="google.com" class="andes-button-dropdown--menu__item"
+                    id="andes-button-dropdown--menu__item-0">Action 1</a></li>
+            <li role="none"><a role="menuitem" href="www.mercadolibre.com.ar" class="andes-button-dropdown--menu__item"
+                    id="andes-button-dropdown--menu__item-1">Action 2</a></li>
+            <li role="none"><button role="menuitem" class="andes-button-dropdown--menu__item"
+                    id="andes-button-dropdown--menu__item-2">Action 3</button></li>
+        </ul>
+
+        <h2>Spinner</h2>
+
+        <button type="button"
+            class="andes-button andes-button--large andes-button--loud andes-button--fetching-complete"><span
+                class="andes-button__content" aria-live="assertive">Press me</span>
+            <div class="andes-spinner andes-spinner--inline andes-spinner--highlight andes-button__spinner">
+                <div
+                    class="andes-spinner__container andes-spinner__container--xsmall andes-spinner__container--xsmall-notlabel">
+                    <span class="andes-visually-hidden">Cargando</span>
+                    <div class="andes-spinner__icon andes-spinner__icon--xsmall">
+                        <div class="andes-spinner__icon-right">
+                            <div class="andes-spinner__icon-border"></div>
+                        </div>
+                        <div class="andes-spinner__icon-left">
+                            <div class="andes-spinner__icon-border"></div>
+                        </div>
+                    </div><span class="andes-spinner__label"></span>
+                </div>
+                <div class="andes-spinner__mask andes-spinner__mask--highlight"></div>
+            </div>
+        </button>
+
 
         <h2>enlace con role</h2>
         <a href="#" class="btn" id="divButton" role="button">Categorías 1</a>
@@ -34,7 +96,7 @@
 
         //divButton.addEventListener('click', downloadStuff);
         //divButton2.addEventListener('click', downloadStuff);
-        
+
         divButton.addEventListener('keydown', (event) => {
             event.preventDefault();
             console.log("Categorías 1");
@@ -56,7 +118,7 @@
                 downloadStuff();
             }
         });
-        
+
 
         function downloadStuff() {
             event.preventDefault();
