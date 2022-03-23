@@ -25,22 +25,59 @@
         <h1>aria-describedby dinámico</h1>
 
         <h2>Prueba 3 v3</h2>
-        <button id="trigger">Trigger</button>
+
+        <div id="ejecuta">
+            <button id="trigger" onfocus="addItems();">Trigger</button>
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            function addItems() {
+                document.getElementById("trigger").setAttribute("aria-describedby", "tooltip");
+
+                var fragment = document.createDocumentFragment();
+                var fragment2 = document.createDocumentFragment();
+
+                // Create a new div tooltip element
+                var tooltip = document.createElement('div');
+                tooltip.setAttribute("role", "tooltip");
+                tooltip.id = "tooltip";
+                var contenidoTooltip = document.createTextNode("Mensaje del tooltip");
+                tooltip.appendChild(contenidoTooltip);
+
+                fragment.appendChild(tooltip);
+                document.body.appendChild(fragment);
+
+            
+
+        
+
+
+
+
+            }
+
+
+        </script>
 
     </main>
 
     <footer></footer>
 
     <script>
-
-        var $trigger = $('#trigger');
-
-        trigger.addEventListener('focus', (event) => {
-            console.log("creo la referencia");
-            trigger.setAttribute("aria-describedby", "tooltip");
-            console.log("Inserto el tooltip en el DOM");
-            trigger.insertAdjacentHTML('afterend', '<div id="tooltip">Mensaje del tooltip</div>');
-        });
+        /*
+   
+           var $trigger = $('#trigger');
+   
+           trigger.addEventListener('focus', (event) => {
+               console.log("creo la referencia");
+               trigger.setAttribute("aria-describedby", "tooltip");
+               console.log("Inserto el tooltip en el DOM");
+               trigger.insertAdjacentHTML('afterend', '<div id="tooltip">Mensaje del tooltip</div>');
+           });
+           */
 
     </script>
 

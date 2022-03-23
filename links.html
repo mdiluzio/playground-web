@@ -26,16 +26,20 @@
 <body>
 
     <header>
-        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
     </header>
 
     <main>
 
-        <a role="link" aria-disabled="true">Learn something!</a>
-        <a aria-disabled="true">Learn something!</a>
-        <a href="#" aria-disabled="true">Learn something!</a>
-
-
+        <div>
+            <a href="" aria-disabled="true" tabindex="0">Learn something! (sin href pero con tabindex 0)</a>
+        </div>
+        <div>
+            <a role="link" aria-disabled="true" tabindex="0">Learn something! (sin href pero con tabindex 0)</a>
+        </div>
+        <div>
+            <a href="#sarasa" aria-disabled="true" tabindex="-1">Learn something! (tabindex -1)</a>
+            Te manda al href igual. 
+        </div>
 
 
         <h1>Links compuesto</h1>
