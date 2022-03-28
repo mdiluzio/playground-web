@@ -34,12 +34,13 @@
         <script type="text/javascript">
             function addItems(mensaje) {
                 document.getElementById("trigger").setAttribute("aria-describedby", "tooltip");
+                
                 var fragment = document.createDocumentFragment();
                 // Create a new div tooltip element
                 var tooltip = document.createElement('div');
-                var mensajeTooltip = document.createTextNode(mensaje);
-                tooltip.appendChild(mensajeTooltip);
+                tooltip.innerText = mensaje;
                 fragment.appendChild(tooltip);
+
                 document.getElementById("tooltip").appendChild(fragment);
             }
         </script>
