@@ -6,6 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thumbnail</title>
+
+    <style>
+        .andes-visually-hidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1;
+            margin: 0 -1px -1px 0;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,36 +28,26 @@
 
     <h2>Text</h2>
 
-    <h3>Oculto</h3>
+    <h3>Con aria-label</h3>
 
-    <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--48">
-        <span role="img" aria-label="JD" aria-hidden="true">JD</span>
+    <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--80">
+        <span aria-hidden="true" title="Juan Daniel">JD</span>
+        <span class="andes-visually-hidde">Juan Daniel</span>
     </div>
 
-    <h3>Sin descripción de las iniciales (aria-label)</h3>
+    <h3>Sin aria-label</h3>
 
-    <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--48">
-        <span role="img" aria-label="JD">JD</span>
+    <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--80">
+        <span aria-hidden="true">JD</span>
     </div>
-
-    <h3>Con descripción de las iniciales (aria-label)</h3>
-
-    <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--48">
-        <span role="img" aria-label="Juan Dios">JD</span>
-    </div>
-
-    <h2>Imágenes</h2>
-
-
-
-    <div class="andes-thumbnail andes-thumbnail--circle andes-thumbnail--48">
-        <img alt="Juan Dios" src="avatar.png">
-    </div>
-
 
     
 
-    
+  
+
+
+
+
 
 </body>
 
