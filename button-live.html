@@ -18,7 +18,8 @@
 
     <main>
 
-        <button id="boton" aria-live="polite">Descargar</button>
+        <button id="boton">Descargar</button>
+        <div id="status" role="status"></div>
 
     </main>
 
@@ -26,12 +27,16 @@
 
     <script>
         const boton = document.getElementById('boton');
+        const status = document.getElementById('status');
 
         boton.addEventListener('click', (event) => {
 
             boton.innerHTML = "Descargando";
+            status.innerHTML = "Descargando";
+
             setTimeout(function () {
                 boton.innerHTML = "Completado";
+                status.innerHTML = "Completado";
             }, 5000);
 
         });
