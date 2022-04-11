@@ -19,7 +19,6 @@
     <main>
 
         <button id="boton">Descargar</button>
-        <div id="status" role="status"></div>
 
     </main>
 
@@ -32,11 +31,9 @@
         boton.addEventListener('click', (event) => {
 
             boton.innerHTML = "Descargando";
-            status.innerHTML = "Descargando";
 
             setTimeout(function () {
                 boton.innerHTML = "Completado";
-                status.innerHTML = "Completado";
             }, 5000);
 
         });
