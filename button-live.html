@@ -18,10 +18,10 @@
 
     <main>
 
-        <button id="boton" aria-live="polite">Descargar</button>
+        <button id="boton" aria-live="assertive">Descargar</button>
 
         <button id="boton2">Descargar 2</button>
-        <div id="status" aria-live="polite"></div>
+        <div id="status" aria-live="assertive"></div>
 
         <button id="boton3">Descargar 3</button>
 
@@ -35,7 +35,9 @@
         //NVDA+Chrome: duplica
         //NVDA+Firefox: triplica
         //Narrator+edge: duplica
-        //VO+chrome: duplica
+        //VOmac+chrome: duplica
+        //VOiphone: OK
+        //Talkback: OK
         const boton = document.getElementById('boton');
         boton.addEventListener('click', (event) => {
             boton.innerHTML = "Descargando";
@@ -48,6 +50,8 @@
         //NVDA+Firefox: duplica
         //Narrator+edge: duplica
         //VO+chrome: duplica
+        //VOiphone: OK
+        //Talkback: OK
         const status = document.getElementById('status');
         const boton2 = document.getElementById('boton2');
         boton2.addEventListener('click', (event) => {
@@ -66,6 +70,8 @@
          //NVDA+Firefox: OK
          //Narrator+edge: OK
          //VO+chrome: OK
+         //VOiphone: no anuncia
+         //Talkback: no anuncia
         const boton3 = document.getElementById('boton3');
         boton3.addEventListener('click', (event) => {
             boton3.innerHTML = "Descargando";
