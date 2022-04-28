@@ -21,7 +21,7 @@
         <button id="boton" aria-live="assertive">Descargar</button>
 
         <button id="boton2">Descargar 2</button>
-        <div id="status" aria-live="assertive"></div>
+        <span id="status" aria-live="assertive"></span>
 
         <button id="boton3">Descargar 3</button>
 
@@ -49,7 +49,7 @@
         //NVDA+Chrome: OK
         //NVDA+Firefox: duplica
         //Narrator+edge: duplica
-        //VO+chrome: duplica
+        //VOmac+chrome: duplica
         //VOiphone: OK
         //Talkback: OK
         const status = document.getElementById('status');
@@ -69,7 +69,7 @@
          //NVDA+Chrome: no anuncia
          //NVDA+Firefox: OK
          //Narrator+edge: OK
-         //VO+chrome: OK
+         //VOmac+chrome: OK
          //VOiphone: no anuncia
          //Talkback: no anuncia
         const boton3 = document.getElementById('boton3');
