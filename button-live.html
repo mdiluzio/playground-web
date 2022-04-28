@@ -25,12 +25,7 @@
 
         <button id="boton3">Descargar 3</button>
 
-        <h2>Region viva</h2>
-        <div aria-live="polite">
-            <div aria-live="assertive" id="status2"></div>
-        </div>
-
-
+      
 
     </main>
 
@@ -72,13 +67,10 @@
          //Narrator+edge: OK
          //VO+chrome: OK
         const boton3 = document.getElementById('boton3');
-        const status2 = document.getElementById('status2');
         boton3.addEventListener('click', (event) => {
             boton3.innerHTML = "Descargando";
-            status2.innerHTML = "Descargando";
             setTimeout(function () {
                 boton3.innerHTML = "Completado";
-                status2.innerHTML = "Completado";
             }, 5000);
 
         });
