@@ -20,14 +20,17 @@
 
         <button id="boton" aria-live="polite">Descargar</button>
 
+        <button id="boton2">Descargar 2</button>
+        <div id="status" aria-live="status"></div>
+
+
+
     </main>
 
     <footer>Footer</footer>
 
     <script>
         const boton = document.getElementById('boton');
-        const status = document.getElementById('status');
-
         boton.addEventListener('click', (event) => {
 
             boton.innerHTML = "Descargando";
@@ -37,6 +40,21 @@
             }, 5000);
 
         });
+
+        const status = document.getElementById('status');
+        const boton2 = document.getElementById('boton2');
+        boton2.addEventListener('click', (event) => {
+            boton2.innerHTML = "Descargando";
+            setTimeout(function () {
+                boton2.innerHTML = "Completado";
+            }, 5000);
+            console.log("Boton2 presionado");
+            status.innerHTML = "Descargando";
+            setTimeout(function () {
+                status.innerHTML = "Completado";
+            }, 5000);
+        });
+        
     </script>
 
 </body>
