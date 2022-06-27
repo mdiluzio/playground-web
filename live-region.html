@@ -29,6 +29,7 @@
     <div id="update"></div>
 
     <button onclick="agregar();">Agregar live region en orden</button>
+    <button onclick="cambiar();">Cambiar valor</button>
 
 
 
@@ -38,11 +39,15 @@
 
         function agregar() {
             $update.append('<span id="cambio" aria-live="polite" role="status" aria-atomic="true"></span>');
-            setTimeout(actualizar, 3000); //puede contener algunos ms
+            setTimeout(actualizar, 2000); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
             $cambio.html('Dato agregado');
+        }
+        function cambiar() {
+            var $cambio = $('#cambio');
+            $cambio.html('Dato modificado');
         }
 
     </script>
