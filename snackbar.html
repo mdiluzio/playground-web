@@ -34,6 +34,32 @@
 
         <h1>Snackbar</h1>
 
+        <div class="andes-dropdown andes-dropdown--form time-range__dropdown open andes-form-control"
+            aria-label="Apertura"><span class="andes-form-control__label" aria-hidden="true">Apertura</span><button
+                type="button" class="andes-dropdown__trigger" aria-label="Apertura" aria-expanded="false"
+                aria-haspopup="listbox" aria-invalid="false"><span class="andes-dropdown__display-values">09:00</span>
+                <div class="andes-dropdown__chevron" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20"
+                        fill="rgba(0, 0, 0, 0.9)">
+                        <path
+                            d="M5.2018 6.75609L9.99743 11.5517L14.7981 6.7511L15.6466 7.59963L9.99743 13.2488L4.35327 7.60462L5.2018 6.75609Z"
+                            fill="rgba(0, 0, 0, 0.9)"></path>
+                    </svg></div>
+            </button></div>
+
+        <div class="andes-snackbar andes-snackbar--error andes-snackbar--right andes-snackbar--animate-hide">
+            <div role="alert" aria-live="assertive">
+                <p class="andes-snackbar__message">Seleccioná una imagen cuadrada.</p>
+            </div>
+        </div>
+
+
+        <div class="andes-snackbar andes-snackbar--success andes-snackbar--right andes-snackbar--animate-hide">
+            <div role="status" aria-live="polite">
+                <p class="andes-snackbar__message">Mensaje de Snackbar</p>
+            </div>
+            <a href="#" class="andes-snackbar__action">Salida</a>
+        </div>
+
         <button id="open1">Open an alert 1</button>
 
         <hr>
@@ -130,7 +156,7 @@
         open5.addEventListener("click", function () {
             msg5.removeAttribute("hidden");
         });
-        
+
         // Adding an role="status" element to the DOM dynamically
         var open6 = document.getElementById("open6");
 

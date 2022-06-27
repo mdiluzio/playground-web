@@ -26,18 +26,9 @@
 
 <body>
 
-    <h1 role="status">Prueba</h1>
-
-    <div role="progressbar">Hola</div>
-
     <div id="update"></div>
 
     <button onclick="agregar();">Agregar live region en orden</button>
-    <button onclick="cambiar();">Cambiar valores de a 10</button>
-
-    <h2>img role="progressbar"</h2>
-    <img role="progressbar" src="spinner.gif" alt="Loading" aria-valuemin="0" aria-valuenow="20" aria-valuemax="100">
-
 
 
 
@@ -46,22 +37,12 @@
         var $update = $('#update');
 
         function agregar() {
-            $update.append('<div id="cambio" role="progressbar" aria-valuemin="0" aria-valuenow="0" aria-valuemax="100" aria-valuetext="0% cargando" aria-label="aria-label" aria-live="polite" aria-atomic="true">SVG</div>');
-            setTimeout(actualizar, 10); //puede contener algunos ms
+            $update.append('<span id="cambio" aria-live="polite" role="status" aria-atomic="true"></span>');
+            setTimeout(actualizar, 3000); //puede contener algunos ms
         }
         function actualizar() {
             var $cambio = $('#cambio');
-            $cambio.html('<div>Dato nuevo</div>');
-        }
-        var $i = 10;
-        function cambiar() {
-            var $anuncio = $('#anuncio');
-            var $progress = $('#progress');
-            $progress.attr("aria-valuenow", $i);
-            $i = $i + 10;
-            if ($i == 100) {
-                $anuncio.html('sr-only: Terminado');
-            }
+            $cambio.html('Dato agregado');
         }
 
     </script>

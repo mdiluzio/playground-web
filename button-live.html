@@ -20,12 +20,14 @@
 
         <button id="boton" aria-live="assertive">Descargar</button>
 
-        <button id="boton2">Descargar 2</button>
+        <button id="boton2">Descargar 2
+            
+        </button>
         <span id="status" aria-live="assertive"></span>
 
         <button id="boton3">Descargar 3</button>
 
-      
+
 
     </main>
 
@@ -46,7 +48,7 @@
                 boton.innerHTML = "Completado";
             }, 5000);
         });
-        
+
         //NVDA+Chrome: OK
         //NVDA+Firefox: duplica
         //Narrator+edge: duplica
@@ -67,14 +69,14 @@
                 status.innerHTML = "Completado";
             }, 5000);
         });
-        
-         //NVDA+Chrome: no anuncia
-         //NVDA+Firefox: OK
-         //Narrator+edge: OK
-         //VOmac+chrome: OK
-         //VOmac+safari: no anuncia
-         //VOiphone: no anuncia
-         //Talkback: no anuncia
+
+        //NVDA+Chrome: no anuncia
+        //NVDA+Firefox: OK
+        //Narrator+edge: OK
+        //VOmac+chrome: OK
+        //VOmac+safari: no anuncia
+        //VOiphone: no anuncia
+        //Talkback: no anuncia
         const boton3 = document.getElementById('boton3');
         boton3.addEventListener('click', (event) => {
             boton3.innerHTML = "Descargando";
@@ -84,6 +86,9 @@
 
         });
     </script>
+
+
+    
 
 </body>
 
