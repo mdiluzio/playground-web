@@ -28,12 +28,12 @@
 
 
 
+        <button id="trigger" onfocus='addItems("Mensaje del tooltip 1");'>Trigger 1</button>
+        <button id="trigger2" onfocus='addItems2("Mensaje del tooltip 2");'>Trigger 2</button>
 
-        <button id="trigger" onfocus='addItems("Mensaje del tooltiop 1");'>Trigger</button>
 
         <script type="text/javascript">
             function addItems(mensaje) {
-
                 const number = Math.floor(Math.random() * 10);
 
                 // Create a new div tooltip element
@@ -46,6 +46,25 @@
 
                 function createTooltip() {
                     document.getElementById("trigger").setAttribute("aria-describedby", "tooltip-" + number);
+                }
+
+                setTimeout(createTooltip, 100);
+            }
+           
+            function addItems2(mensaje) {
+
+                const number = Math.floor(Math.random() * 10);
+
+                // Create a new div tooltip element
+                var tooltip = document.createElement('div');
+                tooltip.setAttribute("role", "tooltip")
+                tooltip.setAttribute("id", "tooltip-" + number)
+
+                tooltip.innerText = mensaje;
+                document.body.appendChild(tooltip);
+
+                function createTooltip() {
+                    document.getElementById("trigger2").setAttribute("aria-describedby", "tooltip-" + number);
                 }
 
                 setTimeout(createTooltip, 100);
