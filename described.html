@@ -33,13 +33,16 @@
 
         <script type="text/javascript">
             function addItems(mensaje) {
-                document.getElementById("trigger").setAttribute("aria-describedby", "tooltip");
 
+                const number = Math.floor(Math.random() * 10);
+                document.getElementById("trigger").setAttribute("aria-describedby", "tooltip-"+number);
 
                 function createTooltip() {
                     // Create a new div tooltip element
                     var tooltip = document.createElement('div');
                     tooltip.setAttribute("role","tooltip")
+                    tooltip.setAttribute("id","tooltip-"+number)
+
                     tooltip.innerText = mensaje;
                     document.body.appendChild(tooltip);
                 }             
