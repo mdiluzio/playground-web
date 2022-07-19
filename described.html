@@ -7,6 +7,43 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        table {
+            display: table;
+            border-collapse: separate;
+            box-sizing: border-box;
+            text-indent: initial;
+            border-spacing: 2px;
+            border-color: grey;
+        }
+
+        tbody {
+            display: table-row-group;
+            vertical-align: middle;
+            border-color: inherit;
+        }
+
+     
+
+        tr {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        }
+
+        th,
+        td {
+            padding: 0.5em;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        user agent stylesheet td {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +69,57 @@
         <div><button id="trigger3" onfocus='addItems3("Mensaje del tooltip 3");'>Trigger 3</button>
             Todo al mismo tiempo</div>
 
-
+        <div>
+            <table>
+                <caption>Resultados</caption>
+                <thead>
+                    <tr>
+                        <th scope="row">Screen Reader</th>
+                        <th colspan="3" scope="colgroup">VoiceOver</th>
+                        <th scope="colgroup">TalkBack</th>
+                        <th colspan="2" scope="colgroup">NVDA</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Browser</th>
+                        <th scope="col">macOS Safari</th>
+                        <th scope="col">macOS Chrome</th>
+                        <th scope="col">iOS Safari</th>
+                        <th scope="col">Chrome</th>
+                        <th scope="col">Firefox</th>
+                        <th scope="col">Chrome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">trigger 1</th>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">trigger 2</th>
+                        <td>OK</td>
+                        <td>FAIL</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">trigger 3</th>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <script type="text/javascript">
             function addItems(mensaje) {
