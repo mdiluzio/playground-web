@@ -24,51 +24,54 @@
     <main>
         <h1>aria-describedby dinámico</h1>
 
-        <h2>Prueba 3 v3</h2>
-
-
 
         <button id="trigger" onfocus='addItems("Mensaje del tooltip 1");'>Trigger 1</button>
         <button id="trigger2" onfocus='addItems2("Mensaje del tooltip 2");'>Trigger 2</button>
+        <button id="trigger3" onfocus='addItems3("Mensaje del tooltip 3");'>Trigger 3</button>
+
 
 
         <script type="text/javascript">
             function addItems(mensaje) {
-                const number = Math.floor(Math.random() * 10);
 
                 // Create a new div tooltip element
                 var tooltip = document.createElement('div');
                 tooltip.setAttribute("role", "tooltip")
-                tooltip.setAttribute("id", "tooltip-" + number)
+                tooltip.setAttribute("id", "tooltip-1")
 
                 tooltip.innerText = mensaje;
                 document.body.appendChild(tooltip);
 
                 function createTooltip() {
-                    document.getElementById("trigger").setAttribute("aria-describedby", "tooltip-" + number);
+                    document.getElementById("trigger").setAttribute("aria-describedby", "tooltip-1");
                 }
 
-                setTimeout(createTooltip, 100);
+                setTimeout(createTooltip, 500);
             }
-           
+
             function addItems2(mensaje) {
 
-                const number = Math.floor(Math.random() * 10);
+                // Create a new div tooltip element
+                document.getElementById("trigger2").setAttribute("aria-describedby", "tooltip-2");
+                function createTooltip() {
+                    var tooltip = document.createElement('div');
+                    tooltip.setAttribute("role", "tooltip")
+                    tooltip.setAttribute("id", "tooltip-2")
 
+                    tooltip.innerText = mensaje;
+                    document.body.appendChild(tooltip);
+                }
+                setTimeout(createTooltip, 500);
+            }
+
+            function addItems3(mensaje) {
+                document.getElementById("trigger3").setAttribute("aria-describedby", "tooltip-3");
                 // Create a new div tooltip element
                 var tooltip = document.createElement('div');
                 tooltip.setAttribute("role", "tooltip")
-                tooltip.setAttribute("id", "tooltip-" + number)
-
+                tooltip.setAttribute("id", "tooltip-3")
                 tooltip.innerText = mensaje;
                 document.body.appendChild(tooltip);
-
-                function createTooltip() {
-                    document.getElementById("trigger2").setAttribute("aria-describedby", "tooltip-" + number);
-                }
-
-                setTimeout(createTooltip, 100);
-
             }
         </script>
 
@@ -76,20 +79,7 @@
 
     <footer></footer>
 
-    <script>
-        /*
-   
-           var $trigger = $('#trigger');
-   
-           trigger.addEventListener('focus', (event) => {
-               console.log("creo la referencia");
-               trigger.setAttribute("aria-describedby", "tooltip");
-               console.log("Inserto el tooltip en el DOM");
-               trigger.insertAdjacentHTML('afterend', '<div id="tooltip">Mensaje del tooltip</div>');
-           });
-           */
 
-    </script>
 
 
 </body>
