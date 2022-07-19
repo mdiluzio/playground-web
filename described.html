@@ -34,14 +34,18 @@
         <script type="text/javascript">
             function addItems(mensaje) {
                 document.getElementById("trigger").setAttribute("aria-describedby", "tooltip");
-                
-                var fragment = document.createDocumentFragment();
-                // Create a new div tooltip element
-                var tooltip = document.createElement('div');
-                tooltip.innerText = mensaje;
-                fragment.appendChild(tooltip);
 
-                document.getElementById("tooltip").appendChild(fragment);
+
+                function createTooltip() {
+                    // Create a new div tooltip element
+                    var tooltip = document.createElement('div');
+                    tooltip.setAttribute("role","tooltip")
+                    tooltip.innerText = mensaje;
+                    document.body.appendChild(tooltip);
+                }             
+
+                setTimeout(createTooltip, 1000);
+
             }
         </script>
 
@@ -64,7 +68,6 @@
 
     </script>
 
-    <div id="tooltip" role="tooltip"></div>
 
 </body>
 
