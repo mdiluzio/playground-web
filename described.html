@@ -25,9 +25,12 @@
         <h1>aria-describedby dinámico</h1>
 
 
-        <button id="trigger" onfocus='addItems("Mensaje del tooltip 1");'>Trigger 1</button>
-        <button id="trigger2" onfocus='addItems2("Mensaje del tooltip 2");'>Trigger 2</button>
-        <button id="trigger3" onfocus='addItems3("Mensaje del tooltip 3");'>Trigger 3</button>
+        <div><button id="trigger" onfocus='addItems("Mensaje del tooltip 1");'>Trigger 1</button>
+            Primero tooltip, luego aria-describedby</div>
+        <div><button id="trigger2" onfocus='addItems2("Mensaje del tooltip 2");'>Trigger 2</button>
+            Primero aria-describedby, luego tooltip</div>
+        <div><button id="trigger3" onfocus='addItems3("Mensaje del tooltip 3");'>Trigger 3</button>
+            Todo al mismo tiempo</div>
 
 
 
