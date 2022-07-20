@@ -49,18 +49,40 @@
 <body>
 
     <header>
-        <a class="sr-only sr-only-focusable" href="#contenido">Saltar a contenido</a>
+        <nav>
+            <a href="#">Inicio</a>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li>Inicio</li>
-        </ul>
-    </nav>
-
     <main>
-        <h1>aria-describedby dinámico</h1>
 
+        <h1>Tooltip</h1>
+
+        <h2>Opciones:</h2>
+        <ul>
+            <li>Sobre un elemento enfocable <strong>no propio</strong>
+                <ul>
+                    <li>Informativo: aria-describedby</li>
+                    <li>Interactivo: aria-owns</li>
+                </ul>
+            </li>
+            <li>Sobre un elemento enfocable <strong>propio</strong>
+                <ul>
+                    <li>modal</li>
+                    <li>aria-owns</li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>aria-owns no es soportado en Safari
+            </li>
+            <li>talkback no dispara focus
+            </li>
+        </ul>
+
+
+        <h2>* aria-describedby dinámico</h2>
 
         <div><button id="trigger" onfocus='addItems("Mensaje del tooltip 1");'>Trigger 1</button>
             Primero tooltip, luego aria-describedby</div>
@@ -71,17 +93,8 @@
 
 
         <div>
-            <ul>
-                <li>Tooltip interactivo sobre su propio trigger (como modal)</li>
-                <li>Tooltip informativo sobre otro elemento trigger (aria-describedby)
-                    <ul>
-                        <li>Talkback no dispara focus</li>
-                    </ul>
-                </li>
-
-            </ul>
+            <h2>Resultados</h2>
             <table>
-                <caption>Resultados</caption>
                 <thead>
                     <tr>
                         <th scope="row">Screen Reader</th>
