@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a11y landing deeplink</title>
+    <title>stepper</title>
     <style>
         .button.info:active {
             display: block;
@@ -19,17 +19,40 @@
 <body>
 
     <header>
-       
-
+        <h1>Stepper</h1>
     </header>
 
     <main class="main">
 
-        <ul></ul>
+        <h2>Controlled mode</h2>
+        <div class="input-stepper">
+            <button type="button" aria-label="decrementar" aria-controls="stepper-1">-</button>
+            <input class="visually-hidden" type="number" id="stepper-1" aria-label="Stepper controlado"
+                aria-describedby="stepper-1-custom-content" step="1" min="0" value="3">
+            <div aria-live="assertive" aria-atomic="true" role="status" class="custom-content">
+                <span id="stepper-1-custom-content">3 elemento seleccinoados</span>
+            </div><button type="button" aria-label="incrementar" aria-controls="stepper-1">+</button>
+        </div>
 
-        <li>Hola</li>
-        <li>Chau</li>
-        
+        <h2>Uncontrolled mode</h2>
+        <div class="input-stepper"><button type="button" aria-label="decrementar"
+                aria-controls="stepper-2">-</button><input class="visually-hidden" type="number" id="stepper-2"
+                aria-label="Stepper no controlado" aria-describedby="stepper-2-custom-content" step="4" max="20" min="0"
+                value="4">
+            <div aria-live="assertive" aria-atomic="true" role="status" class="custom-content"><span
+                    id="stepper-2-custom-content">4 elemento seleccinoados</span></div><button type="button"
+                aria-label="incrementar" aria-controls="stepper-2">+</button>
+        </div>
+        <h5>Stepped mode</h5>
+        <div class="input-stepper"><button type="button" aria-label="decrementar"
+                aria-controls="stepper-3">-</button><input class="visually-hidden" type="number" id="stepper-3"
+                aria-label="Stepper con step 4" aria-describedby="stepper-3-custom-content" step="4" max="20" min="0"
+                value="4">
+            <div aria-live="assertive" aria-atomic="true" role="status" class="custom-content"><span
+                    id="stepper-3-custom-content">4 elemento seleccinoados</span></div><button type="button"
+                aria-label="incrementar" aria-controls="stepper-3">+</button>
+        </div>
+
     </main>
 
 

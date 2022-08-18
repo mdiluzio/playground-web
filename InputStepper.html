@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stepper</title>
+    <style>
+        .button.info:active {
+            display: block;
+        }
+
+        .info {
+            display: none;
+        }
+
+        .spinn {
+            background-color: transparent;
+
+            padding: .5rem;
+            border-color: transparent;
+            color: rgba(0, 0, 0, .9);
+            font-size: inherit;
+            line-height: 1.25;
+            font-family: inherit;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            resize: none;
+            box-sizing: border-box;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding-left: 2px;
+            bottom: 0;
+            pointer-events: none;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Stepper</h1>
+    </header>
+
+    <main class="main">
+
+        <img src="pepe.jpg" />
+
+
+
+        <h2>input nativo</h2>
+        <div class="input-stepper">
+            <button type="button" aria-label="Decrementar" aria-controls="stepper-1">-</button>
+            <div aria-live="polite" aria-atomic="true" role="status" class="custom-content">
+                <input class="visually-hidden spinn" type="number" id="stepper-1" aria-labelledby="label" step="1"
+                    min="0" value="1" width="2">
+                <span id="label" aria-hidden="true"> unidades en el carrito.</span>
+            </div>
+            <button type="button" aria-label="Incrementar" aria-controls="stepper-1">+</button>
+        </div>
+
+
+        <h2>role="spinbutton"</h2>
+        <div class="input-stepper">
+            <button type="button" aria-label="Decrementar" aria-controls="stepper-2">-</button>
+            <span>
+                <span aria-labelledby="label" role="spinbutton" id="stepper-2" aria-valuenow="3" tabindex="0"
+                    aria-valuemin="0" aria-valuemax="100" aria-valuetext="3">3</span>
+                <span id="label" aria-hidden="true">unidades en el carrito.</span>
+            </span>
+            <button type="button" aria-label="Incrementar" aria-controls="stepper-2">+</button>
+        </div>
+
+        <h2>Controlled mode</h2>
+        <div class="input-stepper">
+            <button type="button" aria-label="decrementar" aria-controls="stepper-1">-</button>
+            <input class="visually-hidden" type="number" id="stepper-1" aria-label="Stepper controlado"
+                aria-describedby="stepper-1-custom-content" step="1" min="0" value="3">
+            <div aria-live="assertive" aria-atomic="true" role="status" class="custom-content">
+                <span id="stepper-1-custom-content">3 elemento seleccionados</span>
+            </div><button type="button" aria-label="incrementar" aria-controls="stepper-1">+</button>
+        </div>
+
+        <h2>Uncontrolled mode</h2>
+        <div class="input-stepper"><button type="button" aria-label="decrementar"
+                aria-controls="stepper-2">-</button><input class="visually-hidden" type="number" id="stepper-2"
+                aria-label="Stepper no controlado" aria-describedby="stepper-2-custom-content" step="4" max="20" min="0"
+                value="4">
+            <div aria-live="assertive" aria-atomic="true" role="status" class="custom-content"><span
+                    id="stepper-2-custom-content">4 elemento seleccionados</span></div><button type="button"
+                aria-label="incrementar" aria-controls="stepper-2">+</button>
+        </div>
+
+        <h2>Stepped mode</h2>
+        <div class="input-stepper"><button type="button" aria-label="decrementar"
+                aria-controls="stepper-3">-</button><input class="visually-hidden" type="number" id="stepper-3"
+                aria-label="Stepper con step 4" aria-describedby="stepper-3-custom-content" step="4" max="20" min="0"
+                value="4">
+            <div aria-live="assertive" aria-atomic="true" role="status" class="custom-content"><span
+                    id="stepper-3-custom-content">4 elemento seleccionados</span></div><button type="button"
+                aria-label="incrementar" aria-controls="stepper-3">+</button>
+        </div>
+
+    </main>
+
+    <script>
+
+        // stepper2 = document.getElementById("stepper-2");
+
+        // stepper2.addEventListener("keydown", (event) => {
+        //     var name = event.key;
+        //     console.log(event.key);
+        //     if (name === 'ArrowUp') {
+        //         stepper2.innerHTML = + 1;
+        //         console.log("Tecla up");
+        //     }
+        //     if (name === 'ArrowDown') {
+        //         stepper2.innerHTML = - 1;
+        //         console.log("Tecla down");
+        //     }
+        // });
+
+
+
+    </script>
+
+
+
+
+    <footer></footer>
+
+</body>
+
+</html>
