@@ -1,0 +1,369 @@
+<!DOCTYPE html lang="en-EN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        .button.info:active {
+            display: block;
+        }
+
+        .info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Table</h1>
+    </header>
+
+    <main class="main">
+
+        <h2>Original</h2>
+
+        <table class="andes-table">
+            <thead class="andes-table__head">
+                <tr class="andes-table__row">
+                    <th class="andes-table__header andes-table__header--left andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Fecha<div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--left andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Nro. Operación<div
+                                class="andes-table__sort-icon-container" aria-hidden="true"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--center andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Tipo de movimiento<div
+                                class="andes-table__sort-icon-container" aria-hidden="true"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--left andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Detalle<div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--right andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Importe<div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--right andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Saldo<div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="andes-table__body">
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="08/04/2021"><span class="andes-table__column--value">08/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014538"><span
+                            class="andes-table__column--value">00031-001014538</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Extracción"><span
+                            class="andes-table__column--value">Extracción</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Extracción de efectivo ATM"><span
+                            class="andes-table__column--value">Extracción de efectivo ATM</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$10000"><span class="andes-table__column--value">$10000</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$26500"><span class="andes-table__column--value">$26500</span></td>
+                </tr>
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="07/04/2021"><span class="andes-table__column--value">07/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014539"><span
+                            class="andes-table__column--value">00031-001014539</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Pago"><span
+                            class="andes-table__column--value">Pago</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Liquidación de saldos"><span
+                            class="andes-table__column--value">Liquidación de saldos</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$1650"><span class="andes-table__column--value">$1650</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$24850"><span class="andes-table__column--value">$24850</span></td>
+                </tr>
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="07/04/2021"><span class="andes-table__column--value">07/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014540"><span
+                            class="andes-table__column--value">00031-001014540</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Depósito"><span
+                            class="andes-table__column--value">Depósito</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Acreditación de fondos"><span
+                            class="andes-table__column--value">Acreditación de fondos</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$5000"><span class="andes-table__column--value">$5000</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$29850"><span class="andes-table__column--value">$29850</span></td>
+                </tr>
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="10/04/2021"><span class="andes-table__column--value">10/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014541"><span
+                            class="andes-table__column--value">00031-001014541</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Depósito"><span
+                            class="andes-table__column--value">Depósito</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Acreditación de fondos"><span
+                            class="andes-table__column--value">Acreditación de fondos</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$5000"><span class="andes-table__column--value">$5000</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$34850"><span class="andes-table__column--value">$34850</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Nueva</h2>
+
+        <table class="andes-table">
+            <thead class="andes-table__head">
+                <tr class="andes-table__row">
+                    <th class="andes-table__header andes-table__header--left andes-table__header--sortable" scope="col">
+                        <div class="andes-table__header__container"><button>Fecha
+                            <div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                            </button>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--left andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Nro. Operación<div
+                                class="andes-table__sort-icon-container" aria-hidden="true"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--center andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Tipo de movimiento<div
+                                class="andes-table__sort-icon-container" aria-hidden="true"><svg width="16" height="16"
+                                    viewBox="0 0 16 16" fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--left andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Detalle<div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--right andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Importe<div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                    <th class="andes-table__header andes-table__header--right andes-table__header--sortable"
+                        role="button" tabindex="0">
+                        <div class="andes-table__header__container">Saldo<div class="andes-table__sort-icon-container"
+                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
+                                    fill="rgba(0, 0, 0, 0.9)">
+                                    <path
+                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                    <path
+                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                        fill="rgba(0, 0, 0, 0.9)"></path>
+                                </svg></div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="andes-table__body">
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="08/04/2021"><span class="andes-table__column--value">08/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014538"><span
+                            class="andes-table__column--value">00031-001014538</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Extracción"><span
+                            class="andes-table__column--value">Extracción</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Extracción de efectivo ATM"><span
+                            class="andes-table__column--value">Extracción de efectivo ATM</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$10000"><span class="andes-table__column--value">$10000</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$26500"><span class="andes-table__column--value">$26500</span></td>
+                </tr>
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="07/04/2021"><span class="andes-table__column--value">07/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014539"><span
+                            class="andes-table__column--value">00031-001014539</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Pago"><span
+                            class="andes-table__column--value">Pago</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Liquidación de saldos"><span
+                            class="andes-table__column--value">Liquidación de saldos</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$1650"><span class="andes-table__column--value">$1650</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$24850"><span class="andes-table__column--value">$24850</span></td>
+                </tr>
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="07/04/2021"><span class="andes-table__column--value">07/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014540"><span
+                            class="andes-table__column--value">00031-001014540</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Depósito"><span
+                            class="andes-table__column--value">Depósito</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Acreditación de fondos"><span
+                            class="andes-table__column--value">Acreditación de fondos</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$5000"><span class="andes-table__column--value">$5000</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$29850"><span class="andes-table__column--value">$29850</span></td>
+                </tr>
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Fecha" title="10/04/2021"><span class="andes-table__column--value">10/04/2021</span>
+                    </td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Nro. Operación" title="00031-001014541"><span
+                            class="andes-table__column--value">00031-001014541</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Tipo de movimiento" title="Depósito"><span
+                            class="andes-table__column--value">Depósito</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Detalle" title="Acreditación de fondos"><span
+                            class="andes-table__column--value">Acreditación de fondos</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Importe" title="$5000"><span class="andes-table__column--value">$5000</span></td>
+                    <td class="andes-table__column andes-table__column--left andes-table__column--vertical-align-center"
+                        data-title="Saldo" title="$34850"><span class="andes-table__column--value">$34850</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+
+    <footer></footer>
+
+</body>
+
+</html>
