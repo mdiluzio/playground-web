@@ -1,0 +1,69 @@
+<html lang="es-ES">
+
+<head>
+    <title>Reduce motion</title>
+    <style>
+        #toast {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            transition: all 0.5s ease-in-out;
+            transform: translateY(100%);
+            visibility: hidden;
+        }
+
+        #toast.show {
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #toast {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML -->
+    <div id="toast">
+        <p>¡Mensaje del toast!</p>
+    </div>
+
+    <button id="button">Mostrar</button>
+
+
+    <!-- JavaScript -->
+    <script>
+        const toast = document.getElementById('toast');
+
+        function showToast() {
+          
+                toast.classList.add('show');
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+
+        
+            }
+    
+
+        // Podrías llamar a la función showToast cuando quieras mostrar el toast,
+        // por ejemplo, al hacer click en un botón:
+
+        const button = document.getElementById('button');
+        button.addEventListener('click', showToast);
+
+    </script>
+
+
+</body>
+
+</html>
