@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label inputs</title>
+    <style>
+        .button.info:active {
+            display: block;
+        }
+
+        .info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Labels inputs</h1>
+    </header>
+
+    <main class="main">
+
+        <h2>Label agrupado sin span</h2>
+
+        <label>
+            Nombre completo
+            <input type="checkbox">
+        </label>
+
+        <h2>Label for sin span</h2>
+
+        <label for=”id1”>Nombre completo</label>
+        <input type="checkbox" id=”id1”>
+
+        <h2>Label agrupado con span</h2>
+
+        <label>
+            <span>Nombre completo</span>
+            <input type="checkbox">
+        </label>
+
+        <h2>Label for con span</h2>
+
+        <label for=”id2”><span>Nombre completo</span></label>
+        <input type="checkbox" id=”id2”>
+
+        <h2>Label con aria-label</h2>
+
+        Nombre completo
+        <input type="checkbox" aria-label="Nombre completo">
+
+        <h2>Label con aria-labelledby</h2>
+
+        <span id="label">Nombre completo</span>
+        <input type="checkbox" aria-labelledby="label">
+
+
+    </main>
+
+
+    <footer></footer>
+
+</body>
+
+</html>
