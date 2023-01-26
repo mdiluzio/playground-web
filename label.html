@@ -48,17 +48,22 @@
         <input type="checkbox" id=”id2”>
         <label for=”id2”><span>Nombre completo</span></label>
 
+        <input type="radio" id=”id3”>
+        <label for=”id3”><span>Nombre completo</span></label>
+
         <h2>Label con aria-label</h2>
 
-        <input type="checkbox" aria-label="Nombre completo">   Nombre completo
-       
+        <input type="checkbox" aria-label="Nombre completo"> Nombre completo
+
         <h2>Label con aria-labelledby</h2>
 
         <input type="checkbox" aria-labelledby="label">
         Nombre completo
 
         <h2>Ejemplos direcciones ML</h2>
-
+       
+        <!-- NVDA: En Firefox no asocia el label al radio -->
+        <!-- NVDA: En Chrome funciona bien -->
         <div class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
             <div class="andes-radio-element">
                 <input type="radio" class="andes-radio__input" id="commercial" name="delivery_group" value="commercial">
@@ -77,6 +82,8 @@
                 </svg> </i>
         </div>
 
+        <!-- NVDA: En Firefox funciona bien -->
+        <!-- NVDA: En Chrome funciona bien -->
         <div class="andes-form-control__embedded">
             <label class="andes-checkbox andes-checkbox--default andes-checkbox--embedded">
                 <input class="andes-checkbox__input" type="checkbox">
