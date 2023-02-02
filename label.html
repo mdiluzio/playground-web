@@ -24,26 +24,96 @@
 
     <main class="main">
 
-        <h2>Label agrupado sin span</h2>
+        <h2>Resultados navegando en modo exploración</h2>
+
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>Label agrupado sin span</td>
+                    <td>Label for sin span</td>
+                    <td>Label agrupado con span</td>
+                    <td>Label for con span</td>
+                    <td>Label con aria-label</td>
+                    <td>Label con aria-labelledby</td>
+                    <td>Ejemplos direcciones ML</td>
+                </tr>
+                <tr>
+                    <td>Talkback + Firefox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                </tr>
+                <tr>
+                    <td>Talkback + Chrome</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + Label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                </tr>
+                <tr>
+                    <td>VO iphone + Chrome</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                </tr>
+                <tr>
+                    <td>NVDA + Firefox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox (duplicado)</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox sin label + label</td>
+                </tr>
+                <tr>
+                    <td>NVDA + Chrome</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox (duplicado)</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox sin label + label</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- DivTable.com -->
+
+        <h2>Set de pruebas</h2>
+
+        <h3>Label agrupado sin span</h3>
 
         <label>
             <input type="checkbox">
             Nombre completo
         </label>
 
-        <h2>Label for sin span</h2>
+        <h3>Label for sin span</h3>
 
         <input type="checkbox" id=”id1”>
         <label for=”id1”>Nombre completo</label>
 
-        <h2>Label agrupado con span</h2>
+        <h3>Label agrupado con span</h3>
 
         <label>
             <input type="checkbox">
             <span>Nombre completo</span>
         </label>
 
-        <h2>Label for con span</h2>
+        <h3>Label for con span</h3>
 
         <input type="checkbox" id=”id2”>
         <label for=”id2”><span>Nombre completo</span></label>
@@ -51,17 +121,17 @@
         <input type="radio" id=”id3”>
         <label for=”id3”><span>Nombre completo</span></label>
 
-        <h2>Label con aria-label</h2>
+        <h3>Label con aria-label</h3>
 
         <input type="checkbox" aria-label="Nombre completo"> Nombre completo
 
-        <h2>Label con aria-labelledby</h2>
+        <h3>Label con aria-labelledby</h3>
 
         <input type="checkbox" aria-labelledby="label">
         Nombre completo
 
-        <h2>Ejemplos direcciones ML</h2>
-       
+        <h3>Ejemplos direcciones ML</h3>
+
         <!-- NVDA: En Firefox no asocia el label al radio -->
         <!-- NVDA: En Chrome funciona bien -->
         <div class="andes-radio andes-radio--default andes-radio--inline andes-radio--suffix">
@@ -72,7 +142,9 @@
                     <div class="andes-radio__inner-circle"></div>
                 </div>
             </div>
-            <label class="andes-radio__label" for="commercial"><span>Trabajo</span></label>
+            <label class="andes-radio__label" for="commercial">
+                <span>Trabajo</span>
+            </label>
             <i class="icon-radio">
                 <svg width="14" height="13" viewBox="0 0 14 13" fill="rgba(0, 0, 0, 0.8)"
                     xmlns="http://www.w3.org/2000/svg">
@@ -82,20 +154,9 @@
                 </svg> </i>
         </div>
 
-        <!-- NVDA: En Firefox funciona bien -->
-        <!-- NVDA: En Chrome funciona bien -->
-        <div class="andes-form-control__embedded">
-            <label class="andes-checkbox andes-checkbox--default andes-checkbox--embedded">
-                <input class="andes-checkbox__input" type="checkbox">
-                <span class="andes-checkbox__background"></span>
-                <span class="andes-checkbox__label andes-checkbox__label-text">Sin número</span>
-            </label>
-        </div>
-
         <div>Fin</div>
 
     </main>
-
 
     <footer></footer>
 
