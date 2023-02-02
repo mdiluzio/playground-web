@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label inputs</title>
+    <style>
+        .button.info:active {
+            display: block;
+        }
+
+        .info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Labels inputs radio</h1>
+    </header>
+
+    <main class="main">
+
+        <h2>label for</h2>
+
+        <h3>input dentro de un div</h3>
+        <div>
+            <input id="boton1" type="radio">
+        </div>
+        <label for="boton1">Label del botón</label>
+
+        <h3>input fuera de un div</h3>
+        <input id="boton2" type="radio">
+        <label for="boton2">Label del botón</label>
+
+        <h2>label wrapper</h2>
+
+        <h3>input dentro de un div</h3>
+        <label>
+            <div>
+                <input id="boton1" type="radio">
+            </div>
+            Label del botón
+        </label>
+
+        <h3>input fuera de un div</h3>
+        <label>
+            <input id="boton1" type="radio">
+            Label del botón
+        </label>
+
+
+
+
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
