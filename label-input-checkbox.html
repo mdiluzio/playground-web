@@ -16,49 +16,38 @@
     <main class="main">
 
 
-        <h2>Andes textfield con checklist</h2>
+        <h2>label for</h2>
 
+        <h3>input dentro de un div</h3>
+        <label for="boton1">Label del botón</label>
+        <div>
+            <input id="boton1" type="checkbox">
+        </div>
+
+        <h3>input fuera de un div</h3>
+        <label for="boton2">Label del botón</label>
+        <input id="boton2" type="checkbox">
+
+        <h2>label wrapper</h2>
+
+        <h3>input dentro de un div</h3>
         <label>
-            <span class="andes-form-control__label">Número</span>
-            <div class="andes-form-control__control"><input autocomplete="do-not-autofill" name="address.street.number"
-                    textbox="false" rows="1" class="andes-form-control__field" maxlength="128" value="">
-                <div class="andes-form-control__embedded">
-                    <label class="andes-checkbox andes-checkbox--default andes-checkbox--embedded">
-                        <input class="andes-checkbox__input" type="checkbox">
-                        <span class="andes-checkbox__background"></span>
-                        <span class="andes-checkbox__label andes-checkbox__label-text">Sin número</span>
-                    </label>
-                </div>
+            Label del botón
+            <div>
+                <input id="boton1" type="checkbox">
             </div>
         </label>
 
-        <h2>Sin labels anidado dentro de un div</h2>
-
+        <h3>input fuera de un div</h3>
         <label>
-            <span class="andes-form-control__label">Número</span>
-            <div class="andes-form-control__control">
-                <input autocomplete="do-not-autofill" name="address.street.number"
-                    textbox="false" rows="1" class="andes-form-control__field" maxlength="128" value="">
-            </div>
-        </label>
-        <label class="andes-checkbox andes-checkbox--default andes-checkbox--embedded"><input
-                class="andes-checkbox__input" type="checkbox"><span class="andes-checkbox__background"></span><span
-                class="andes-checkbox__label andes-checkbox__label-text">Sin número</span>
+            Label del botón
+            <input id="boton1" type="checkbox">
         </label>
 
-        <h2>Sin labels anidado fuera de un div</h2>
 
-        <label>
-            <span class="andes-form-control__label">Número</span>
-          
-                <input autocomplete="do-not-autofill" name="address.street.number"
-                    textbox="false" rows="1" class="andes-form-control__field" maxlength="128" value="">
-         
-        </label>
-        <label class="andes-checkbox andes-checkbox--default andes-checkbox--embedded"><input
-                class="andes-checkbox__input" type="checkbox"><span class="andes-checkbox__background"></span><span
-                class="andes-checkbox__label andes-checkbox__label-text">Sin número</span>
-        </label>
+
+
+        <div>Fin</div>
 
 
 
