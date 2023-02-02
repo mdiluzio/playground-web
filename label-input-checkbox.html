@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label inputs</title>
+    <style>
+        .button.info:active {
+            display: block;
+        }
+
+        .info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Labels inputs checkbox</h1>
+    </header>
+
+    <main class="main">
+
+        <h2>Resultados navegando en modo exploración</h2>
+
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>Label agrupado sin span</td>
+                    <td>Label for sin span</td>
+                    <td>Label agrupado con span</td>
+                    <td>Label for con span</td>
+                    <td>Label con aria-label</td>
+                    <td>Label con aria-labelledby</td>
+                    <td>Ejemplos direcciones ML</td>
+                </tr>
+                <tr>
+                    <td>Talkback + Firefox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                </tr>
+                <tr>
+                    <td>Talkback + Chrome</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + Label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox + label</td>
+                </tr>
+                <tr>
+                    <td>VO iphone + Chrome</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                </tr>
+                <tr>
+                    <td>NVDA + Firefox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox (duplicado)</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox sin label + label</td>
+                </tr>
+                <tr>
+                    <td>NVDA + Chrome</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox + label</td>
+                    <td>Checkbox (duplicado)</td>
+                    <td>Checkbox</td>
+                    <td>Checkbox</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- DivTable.com -->
+
+        <h2>Set de pruebas</h2>
+
+        <h3>Label agrupado sin span</h3>
+
+        <label>
+            <input type="checkbox">
+            Nombre completo
+        </label>
+
+        <h3>Label for sin span</h3>
+
+        <input type="checkbox" id="id1">
+        <label for="id1">Nombre completo</label>
+
+        <h3>Label agrupado con span</h3>
+
+        <label>
+            <input type="checkbox">
+            <span>Nombre completo</span>
+        </label>
+
+        <h3>Label for con span</h3>
+
+        <input type="checkbox" id="id2">
+        <label for=”id2”><span>Nombre checkbox</span></label>
+
+        <h3>Label con aria-label</h3>
+
+        <input type="checkbox" aria-label="Nombre completo"> Nombre completo
+
+        <h3>Label con aria-labelledby</h3>
+
+        <input type="checkbox" aria-labelledby="label">
+        Nombre completo
+
+        <div>Fin</div>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
