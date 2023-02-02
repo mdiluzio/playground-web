@@ -5,15 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Label inputs</title>
-    <style>
-        .button.info:active {
-            display: block;
-        }
-
-        .info {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -24,104 +15,40 @@
 
     <main class="main">
 
-        <h2>Resultados navegando en modo exploración</h2>
 
-        <table border="1">
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td>Label agrupado sin span</td>
-                    <td>Label for sin span</td>
-                    <td>Label agrupado con span</td>
-                    <td>Label for con span</td>
-                    <td>Label con aria-label</td>
-                    <td>Label con aria-labelledby</td>
-                </tr>
-                <tr>
-                    <td>Talkback + Firefox</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox + label</td>
-                </tr>
-                <tr>
-                    <td>Talkback + Chrome</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox + Label</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox + label</td>
-                </tr>
-                <tr>
-                    <td>VO iphone + Chrome</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                </tr>
-                <tr>
-                    <td>NVDA + Firefox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox (duplicado)</td>
-                    <td>Checkbox</td>
-                </tr>
-                <tr>
-                    <td>NVDA + Chrome</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox</td>
-                    <td>Checkbox + label</td>
-                    <td>Checkbox (duplicado)</td>
-                    <td>Checkbox</td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- DivTable.com -->
-
-        <h2>Set de pruebas</h2>
-
-        <h3>Label agrupado sin span</h3>
+        <h2>Andes textfield con checklist</h2>
 
         <label>
-            <input type="checkbox">
-            Nombre completo
+            <span class="andes-form-control__label">Número</span>
+            <div class="andes-form-control__control"><input autocomplete="do-not-autofill" name="address.street.number"
+                    textbox="false" rows="1" class="andes-form-control__field" maxlength="128" value="">
+                <div class="andes-form-control__embedded"><label
+                        class="andes-checkbox andes-checkbox--default andes-checkbox--embedded"><input
+                            class="andes-checkbox__input" type="checkbox"><span
+                            class="andes-checkbox__background"></span><span
+                            class="andes-checkbox__label andes-checkbox__label-text">Sin número</span></label></div>
+            </div>
         </label>
 
-        <h3>Label for sin span</h3>
-
-        <input type="checkbox" id="id1">
-        <label for="id1">Nombre completo</label>
-
-        <h3>Label agrupado con span</h3>
+        <h2>Sin label anidado</h2>
 
         <label>
-            <input type="checkbox">
-            <span>Nombre completo</span>
+            <span class="andes-form-control__label">Número</span>
+            <div class="andes-form-control__control"><input autocomplete="do-not-autofill" name="address.street.number"
+                    textbox="false" rows="1" class="andes-form-control__field" maxlength="128" value="">
+                <div class="andes-form-control__embedded">
+                  
+                    </div>
+            </div>
+        </label>
+        <label
+        class="andes-checkbox andes-checkbox--default andes-checkbox--embedded"><input
+            class="andes-checkbox__input" type="checkbox"><span
+            class="andes-checkbox__background"></span><span
+            class="andes-checkbox__label andes-checkbox__label-text">Sin número</span>
         </label>
 
-        <h3>Label for con span</h3>
 
-        <input type="checkbox" id="id2">
-        <label for=”id2”><span>Nombre checkbox</span></label>
-
-        <h3>Label con aria-label</h3>
-
-        <input type="checkbox" aria-label="Nombre completo"> Nombre completo
-
-        <h3>Label con aria-labelledby</h3>
-
-        <input type="checkbox" aria-labelledby="label">
-        Nombre completo
-
-        <div>Fin</div>
 
     </main>
 
