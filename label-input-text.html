@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label inputs</title>
+    <style>
+        .button.info:active {
+            display: block;
+        }
+
+        .info {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Labels inputs</h1>
+    </header>
+
+    <main class="main">
+
+        <h2>label for</h2>
+
+        <h3>input dentro de un div</h3>
+        <label for="boton1">Label del botón</label>
+        <div>
+            <input id="boton1" type="text">
+        </div>
+    
+        <h3>input fuera de un div</h3>
+        <label for="boton2">Label del botón</label>
+        <input id="boton2" type="text">
+
+        <h2>label wrapper</h2>
+
+        <h3>input dentro de un div</h3>
+        <label>
+            Label del botón
+            <div>
+                <input id="boton1" type="text">
+            </div>
+        </label>
+
+        <h3>input fuera de un div</h3>
+        <label>
+            Label del botón
+            <input id="boton1" type="text">
+        </label>
+
+
+        
+
+        <div>Fin</div>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>
