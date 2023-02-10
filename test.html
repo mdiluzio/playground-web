@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money</title>
     <style>
-       
-
-      .andes-checkbox__label-text {
+        .andes-checkbox__label-text {
             padding-left: 1.5em;
         }
-
-      .andes-checkbox__label {
+        .andes-checkbox__label-text {
+            padding-left: 1.5em;
+        }
+        .andes-checkbox__label {
             display: inline-flex;
             font-family: "Proxima Nova", -apple-system, "Roboto", Arial, sans-serif;
             font-size: 16px;
@@ -20,47 +20,14 @@
             font-weight: 400;
         }
 
-     .andes-checkbox__label-text {
-            padding-left: 1.5em;
-        }
-
-       .andes-checkbox__label {
+        .andes-checkbox__label {
             display: inline-flex;
             font-family: "Proxima Nova", -apple-system, "Roboto", Arial, sans-serif;
             font-size: 16px;
             color: rgba(0, 0, 0, .9);
             font-weight: 400;
         }
-
-       .andes-checkbox__label-text {
-            padding-left: 1.5em;
-        }
-
-       .andes-checkbox__label {
-            display: inline-flex;
-            font-family: "Proxima Nova", -apple-system, "Roboto", Arial, sans-serif;
-            font-size: 16px;
-            color: rgba(0, 0, 0, .9);
-            font-weight: 400;
-        }
-
-       .andes-checkbox {
-            position: relative;
-            cursor: pointer;
-            font-family: "Proxima Nova", -apple-system, "Roboto", Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            font-size: 16px;
-        }
-
-       .andes-checkbox {
-            position: relative;
-            cursor: pointer;
-            font-family: "Proxima Nova", -apple-system, "Roboto", Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            font-size: 16px;
-        }
-
-      >.andes-checkbox {
+        .andes-checkbox {
             position: relative;
             cursor: pointer;
             font-family: "Proxima Nova", -apple-system, "Roboto", Arial, sans-serif;
@@ -71,7 +38,6 @@
         user agent stylesheet label {
             cursor: default;
         }
-
         body {
             font-family: "Proxima Nova", -apple-system, "Roboto", Arial, sans-serif;
             font-size: 16px;
@@ -82,6 +48,18 @@
             background-color: #fff !important;
             margin: 0;
             padding: 0;
+        }
+        .andes-checkbox__input:after {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity .2s ease-out;
+            border-radius: 3px;
+            background: #fff;
+            opacity: 0;
+            box-sizing: content-box;
         }
     </style>
 </head>
@@ -97,7 +75,7 @@
         <h2>checkbox Andes</h2>
 
         <div>
-            <label class="andes-checkbox andes-checkbox--default andes-checkbox--default">
+            <label class="andes-checkbox andes-checkbox--default">
                 <input class="andes-checkbox__input" type="checkbox" checked="">
                 <span class="andes-checkbox__background"></span>
                 <span class="andes-checkbox__label andes-checkbox__label-text">Checkbox label</span>
@@ -107,7 +85,7 @@
         <h2>switch Andes</h2>
 
         <div>
-            <label class="andes-checkbox andes-switch andes-checkbox--default andes-checkbox--default">
+            <label class="andes-checkbox andes-switch andes-checkbox--default">
                 <input role="switch" class="andes-checkbox__input" type="checkbox" checked="">
                 <span class="andes-checkbox__background"></span>
                 <span class="andes-checkbox__label andes-checkbox__label-text">Switch label</span>
