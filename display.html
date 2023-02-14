@@ -34,6 +34,9 @@
         .cx-peach__effectivity__buttons {
             display: block;
         }
+        .cx-peach__effectivity__buttons2 {
+            display: inline-block;
+        }
         .andes-technical-error__code-button {
             cursor: pointer;
             display: flex;
@@ -52,7 +55,17 @@
     <h1>Propiedad display</h1>
 
     <h2>Ayuda MP (display:block)</h2>
+    <div name="scroll-to-element" class="cx-peach__effectivity__wrapper">
+        <h3 class="cx-peach__effectivity__title">¿Te fue útil la información?</h3>
+        <div class="cx-peach__effectivity__buttons">
+            <button type="button" class="andes-button btn yes andes-button--medium andes-button--quiet"
+                data-testid="yes-btn"><span class="andes-button__content">Sí</span></button>
+            <button type="button" class="andes-button btn no andes-button--medium andes-button--quiet"
+                data-testid="no-btn"><span class="andes-button__content">No</span></button>
+        </div>
+    </div>
 
+    <h2>Ayuda MP (display:inline-block)</h2>
     <div name="scroll-to-element" class="cx-peach__effectivity__wrapper">
         <h3 class="cx-peach__effectivity__title">¿Te fue útil la información?</h3>
         <div class="cx-peach__effectivity__buttons">
