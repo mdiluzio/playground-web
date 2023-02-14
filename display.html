@@ -30,6 +30,25 @@
             border: 1px solid blue;
             background-color: yellow;
         }
+        div.d {
+            display: flex;
+            /* the default for span */
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+
+        div.e {
+            display: inline-flex;
+            /* the default for span */
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
 
         .cx-peach__effectivity__buttons {
             display: block;
@@ -80,6 +99,7 @@
             padding: 4px 8px;
             margin-bottom: 24px;
         }
+    
     </style>
 </head>
 
@@ -198,6 +218,18 @@
     <div>
         <div class="c">Aliquam</div>
         <div class="c">venenatis</div>
+    </div>
+
+    <h2>display: flex</h2>
+    <div class="d">
+        <div>Aliquam</div>
+        <div>venenatis</div>
+    </div>
+
+    <h2>display: inline-flex</h2>
+    <div class="e">
+        <div>Aliquam</div>
+        <div>venenatis</div>
     </div>
 
 </body>
