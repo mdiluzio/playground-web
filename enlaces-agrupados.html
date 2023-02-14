@@ -22,7 +22,7 @@
 
         <h2>List button Andes display flex</h2>
         <style>
-            .theme-ml .andes-list__item-action {
+            .andes-list__item-action {
                 outline: none;
                 display: flex;
                 justify-content: space-between;
@@ -39,6 +39,18 @@
                 width: -webkit-fill-available;
                 width: fill-available;
             }
+            .andes-list__item-anchor {
+                outline: none;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                text-decoration: none;
+                padding: 0 16px;
+                margin: 0 -16px;
+                width: -moz-available;
+                width: -webkit-fill-available;
+                width: fill-available;
+            }
         </style>
         <ul>
             <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-image andes-list__item-with-secondary"
@@ -46,12 +58,12 @@
                 <button class="andes-list__item-action">
                     <div class="andes-list__item-first-column">
                         <div class="andes-list__item-asset" aria-hidden="true"><img class="andes-list__item-image"
-                                src=""
-                                alt=""></div>
-                        <div class="andes-list__item-text"><span
-                                class="andes-list__item-primary andes-list__item-primary--max-lines-2">Anabel Anabel
+                                src="" alt=""></div>
+                        <div class="andes-list__item-text">
+                            <span class="andes-list__item-primary andes-list__item-primary--max-lines-2">Anabel Anabel
                                 Anabel Anabel Anabel Anabel</span><span class="andes-list__item-secondary">Frontend
-                                developer</span></div>
+                                developer</span>
+                        </div>
                     </div>
                 </button>
                 <div class="andes-list__item-second-column andes-list__item-second-column-with-centered-text"><span
@@ -68,6 +80,35 @@
                         </svg></div>
                 </div>
             </li>
+
+            <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-image andes-list__item-with-secondary"
+            id="miembros-del-equipo-0">
+            <a class="andes-list__item-anchor" href="#">
+                <div class="andes-list__item-first-column">
+                    <div class="andes-list__item-asset" aria-hidden="true"><img class="andes-list__item-image"
+                            src="" alt=""></div>
+                    <div class="andes-list__item-text">
+                        <span class="andes-list__item-primary andes-list__item-primary--max-lines-2">Anabel Anabel
+                            Anabel Anabel Anabel Anabel</span>
+                            <span class="andes-list__item-secondary">Frontend
+                            developer</span>
+                    </div>
+                </div>
+            </a>
+            <div class="andes-list__item-second-column andes-list__item-second-column-with-centered-text"><span
+                    class="andes-list__item-tertiary andes-list__item-tertiary--centered">$9.999</span>
+                <div class="andes-list__item-chevron andes-list__item-chevron--centered"><svg width="20px"
+                        height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                            fill-opacity="0.449999988">
+                            <polygon fill="#000000" fill-rule="nonzero"
+                                transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
+                                points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
+                            </polygon>
+                        </g>
+                    </svg></div>
+            </div>
+        </li>
         </ul>
 
 
