@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Money</title>
     <style>
-       ul {
-        list-style: none;
-       }
+        ul {
+            list-style: none;
+        }
     </style>
 </head>
 
@@ -21,14 +21,29 @@
     <main class="main">
 
         <h2>Botones con divs (mala práctica)</h2>
+        <p>Funciona bien en NVDA + Chrome/Firefox / VO + safari</p>
+
+        <h2>Enlaces con divs</h2>
+
+
 
         <ul>
+            <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-secondary" id="telefonos-0">
+                <a href="#">
+                    <div class="andes-list__item-first-column">
+                        <div class="andes-list__item-text"><span class="andes-list__item-primary">Iphone 11</span><span
+                                class="andes-list__item-secondary">256gb de memoria</span></div>
+                    </div>
+                    <div class="andes-list__item-second-column"><span
+                            class="andes-list__item-tertiary andes-list__item-tertiary--centered">$1100</span></div>
+                </a>
+            </li>
             <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-image andes-list__item-with-secondary"
-                id="miembros-del-equipo-0"><button class="andes-list__item-action">
+                id="miembros-del-equipo-0">
+                <button class="andes-list__item-action">
                     <div class="andes-list__item-first-column">
                         <div class="andes-list__item-asset" aria-hidden="true"><img class="andes-list__item-image"
-                                src=""
-                                alt=""></div>
+                                src="" alt=""></div>
                         <div class="andes-list__item-text"><span
                                 class="andes-list__item-primary andes-list__item-primary--max-lines-2">Anabel Anabel
                                 Anabel Anabel Anabel Anabel</span><span class="andes-list__item-secondary">Frontend
