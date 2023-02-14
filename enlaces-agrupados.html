@@ -9,8 +9,11 @@
         ul {
             list-style: none;
         }
-        div {
-            display: inline-block;
+        .andes-list__item-first-column {
+            display: inline-flex;
+        }
+        .andes-list__item-second-column {
+            display: inline-flex;
         }
     </style>
 </head>
@@ -39,7 +42,7 @@
         <ul>
             <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-secondary" id="telefonos-0">
                 <a href="#">
-                    <div class="andes-list__item-first-column">
+                    <div class="">
                         <div class="andes-list__item-text"><span class="andes-list__item-primary">Iphone 11</span><span
                                 class="andes-list__item-secondary">256gb de memoria</span></div>
                     </div>
@@ -50,7 +53,7 @@
             <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-image andes-list__item-with-secondary"
                 id="miembros-del-equipo-0">
                 <button class="andes-list__item-action">
-                    <div class="andes-list__item-first-column">
+                    <div class="">
                         <div class="andes-list__item-asset" aria-hidden="true"><img class="andes-list__item-image"
                                 src="" alt=""></div>
                         <div class="andes-list__item-text"><span
@@ -59,7 +62,7 @@
                                 developer</span></div>
                     </div>
                 </button>
-                <div class="andes-list__item-second-column andes-list__item-second-column-with-centered-text"><span
+                <div class="andes-list__item-second-column-with-centered-text"><span
                         class="andes-list__item-tertiary andes-list__item-tertiary--centered">$9.999</span>
                     <div class="andes-list__item-chevron andes-list__item-chevron--centered"><svg width="20px"
                             height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +79,7 @@
             </li>
         </ul>
 
-        <h2>Dsiplay inline-block</h2>
+        <h2>Dsiplay inline-flex</h2>
 
         <ul>
             <li class="andes-list__item andes-list__item--size-medium andes-list__item-with-secondary" id="telefonos-0">
