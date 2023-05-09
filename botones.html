@@ -3,63 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <style>
-        ul {
-            list-style: none;
-        }
-    </style>
-
+    <title>Botones</title>
 </head>
 
 <body>
-
     <header>
         <h1>Botones</h1>
     </header>
 
     <main id="contenido">
+        <h2>Botones</h2>
 
-        <div class="boton" onclick="Enviar();" role="button" tabindex="0">Enviar</div>
+        <h3>button style="display: block;</h3>
+
+        <button style="display: block;">
+            <span class="first" style="display: block;">Texto 1 </span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </button>
+
+        <h3>button style="display: flex;"</h3>
+
+        <button style="display: flex;">
+            <span class="first" style="display: block;">Texto 1 </span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </button>
 
     </main>
-
-    <script>
-        const divButton = document.getElementById('divButton');
-        const divButton2 = document.getElementById('divButton2');
-
-
-        //divButton.addEventListener('click', downloadStuff);
-        //divButton2.addEventListener('click', downloadStuff);
-        
-        divButton.addEventListener('keydown', (event) => {
-            event.preventDefault();
-            console.log("Categorías 1");
-            if (event.code === 'Space') {
-                event.preventDefault();
-                downloadStuff();
-            }
-            if (event.code === 'Enter') {
-                event.preventDefault();
-                downloadStuff();
-            }
-        });
-        divButton2.addEventListener('keydown', (event) => {
-            console.log("Categorías 2");
-            if (event.code === 'Space') {
-                downloadStuff();
-            }
-            if (event.code === 'Enter') {
-                downloadStuff();
-            }
-        });
-        
-
-        function downloadStuff() {
-            event.preventDefault();
-            alert('Boton desplegado');
-        }
-    </script>
-
     <footer></footer>
 </body>
 
