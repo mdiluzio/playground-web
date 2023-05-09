@@ -13,21 +13,84 @@
 
     <main id="contenido">
 
-        <h2>Botones</h2>
+        <style>
+            button,
+            span {
+                border: 1px solid black;
+                padding: 5px;
+                margin: 5px;
+            }
+        </style>
 
-        <h3>button | span</h3>
 
-        <button>
-            <span class="first">Texto 1 </span>
-            <span class="second"">Texto 2</span>
-        </button>
+        <h2>Combinaciones de display</h2>
 
-        <h3>button style="display: flex;" | span style="display: block;"</h3>
-
-        <button style="display: flex;">
-            <span class="first" style="display: block;">Texto 1 </span>
+        <h3>1. display: block;</h3>
+        <button style="display: block;">
+            <span class="first" style="display: block;">Texto 1</span>
             <span class="second" style="display: block;">Texto 2</span>
         </button>
+
+        <br /><br />
+
+        <button style="display: block;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </button>
+
+        <h3>2. display: inline;</h3>
+        <button style="display: inline;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </button>
+
+        <br><br>
+
+        <button style="display: inline;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </button>
+
+        <h3>3. display: inline-block;</h3>
+        <button style="display: inline-block;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </button>
+
+        <br><br>
+
+        <button style="display: inline-block;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </button>
+
+        <h3>4. display: flex;</h3>
+        <button style="display: flex;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </button>
+
+        <br><br>
+
+        <button style="display: flex;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </button>
+
+        <h3>5. display: inline-flex;</h3>
+        <button style="display: inline-flex;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </button>
+
+        <br><br>
+
+        <button style="display: inline-flex;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </button>
+
+
 
     </main>
 
