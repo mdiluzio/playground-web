@@ -1,216 +1,243 @@
-<!DOCTYPE html lang="en-EN">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Money</title>
-    <style>
-        .button.info:active {
-            display: block;
-        }
-
-        .info {
-            display: none;
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>Enlaces</title>
 </head>
 
 <body>
-
     <header>
-        <h1>Enlaces agrupados</h1>
+        <h1>Enlaces</h1>
     </header>
 
-    <main class="main">
+    <main id="contenido">
 
-        <div tabindex="0">Texto con tabindex</div>
-        <div onclick="alert('Hola');">Texto con onClick</div>
+        <style>
+            a,
+            span {
+                border: 1px solid black;
+                padding: 5px;
+                margin: 5px;
+            }
+        </style>
 
+        <h2>Resultados</h2>
 
-        <a href="#"><span>Hola,</span><span> Como estas?</span></a>
+        <table style="width: 100%;" border="1" cellpadding="2">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <th>NVDA/Chrome</th>
+                    <th>NVDA/Firefox</th>
+                    <th>Narrator/Edge</th>
+                    <th>VO/Mac</th>
+                    <th>VO/iPhone</th>
+                    <th>Talkback</th>
+                </tr>
+                <tr>
+                    <td>Link default | span default</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link default | span block</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link block | span inline</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link block | span block</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link inline | span inline</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link inline | span block</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link inline-block | span inline</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link inline-block | span block</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link flex | span inline</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link flex | span block</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link inline-flex | span inline</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Link inline-flex | span block</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- DivTable.com -->
 
-        <a href="#"><span>Chau</span></a>
+        <h2>Playground</h2>
 
-        <a href="#">Todo bien</a>
-
-        <h2>Texto plano 2 divs</h2>
-
-        <div class="andes-list__item-first-column">
-            <div class="andes-list__item-asset" aria-hidden="true"><img width="18" height="18" decoding="async"
-                    src="https://http2.mlstatic.com/frontend-assets/moneyin-hub-frontend/icon-cash.svg"
-                    class="item__image" alt="image list item"></div>
-            <div class="andes-list__item-text"><span class="andes-list__item-primary">
-                    <div class="item__title">Rapipago y Pago Fácil</div>
-                </span><span class="andes-list__item-secondary">
-                    <div class="item__value-props"><span class="item__value-props-default">1% por
-                            transacción</span><span class="item__value-props-default">En hasta 2
-                            horas</span>
-                    </div>
-                </span></div>
-        </div>
-        <div class="andes-list__item-second-column">
-            <div class="andes-list__item-chevron andes-list__item-chevron--top"><svg width="20px" height="20px"
-                    viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.449999988">
-                        <polygon fill="#000000" fill-rule="nonzero"
-                            transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
-                            points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
-                        </polygon>
-                    </g>
-                </svg></div>
-        </div>
-
-        <h2>Texto plano 2 span</h2>
-
-        <span>Hola, </span>
-        <span>Como estas?</span>
-
-
-        <h2>Botones</h2>
-        <button>
-            <div class="andes-list__item-first-column">
-                <div class="andes-list__item-asset" aria-hidden="true"><img width="18" height="18" decoding="async"
-                        src="https://http2.mlstatic.com/frontend-assets/moneyin-hub-frontend/icon-cash.svg"
-                        class="item__image" alt="image list item"></div>
-                <div class="andes-list__item-text"><span class="andes-list__item-primary">
-                        <div class="item__title">Rapipago y Pago Fácil</div>
-                    </span><span class="andes-list__item-secondary">
-                        <div class="item__value-props"><span class="item__value-props-default">1% por
-                                transacción</span><span class="item__value-props-default">En hasta 2
-                                horas</span>
-                        </div>
-                    </span></div>
-            </div>
-            <div class="andes-list__item-second-column">
-                <div class="andes-list__item-chevron andes-list__item-chevron--top"><svg width="20px" height="20px"
-                        viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.449999988">
-                            <polygon fill="#000000" fill-rule="nonzero"
-                                transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
-                                points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
-                            </polygon>
-                        </g>
-                    </svg></div>
-            </div>
-        </button>
-        <!-- NVDA + firefox: separa -->
-        <!-- NVDA + chrome: separa -->
-
-        <h2>botones con 2 span agrupados en 1 div</h2>
-        <button>
-            <div class="andes-list__item-first-column">
-                <span>Hola,</span><span> como estas?</span>
-            </div>
-        </button>
-
-        <h2>Enlaces con 2 divs</h2>
+        <h3>Default</h3>
         <a href="#">
-            <div class="andes-list__item-first-column">
-                <div class="andes-list__item-asset" aria-hidden="true"><img width="18" height="18" decoding="async"
-                        src="https://http2.mlstatic.com/frontend-assets/moneyin-hub-frontend/icon-cash.svg"
-                        class="item__image" alt="image list item"></div>
-                <div class="andes-list__item-text"><span class="andes-list__item-primary">
-                        <div class="item__title">Rapipago y Pago Fácil</div>
-                    </span><span class="andes-list__item-secondary">
-                        <div class="item__value-props"><span class="item__value-props-default">1% por
-                                transacción</span><span class="item__value-props-default">En hasta 2
-                                horas</span>
-                        </div>
-                    </span></div>
-            </div>
-            <div class="andes-list__item-second-column">
-                <div class="andes-list__item-chevron andes-list__item-chevron--top"><svg width="20px" height="20px"
-                        viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.449999988">
-                            <polygon fill="#000000" fill-rule="nonzero"
-                                transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
-                                points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
-                            </polygon>
-                        </g>
-                    </svg></div>
-            </div>
+            <span>Texto 1</span>
+            <span>Texto 2</span>
         </a>
-        <!-- NVDA + firefox: separa -->
-        <!-- NVDA + chrome: separa -->
 
-        <h2>Enlaces con 2 span agrupados en 1 div</h2>
+        <br /><br />
+
         <a href="#">
-            <div class="andes-list__item-first-column">
-                <span>Hola,</span><span> como estas?</span>
-            </div>
+            <span style="display: block;">Texto 1</span>
+            <span style="display: block;">Texto 2</span>
         </a>
 
-        <h2>Enlaces aria-labelledby</h2>
-        <a href="#" aria-labelledby="enlace">
-            <div id="enlace" aria-hidden="true">
-                <div class="andes-list__item-first-column">
-                    <div class="andes-list__item-asset" aria-hidden="true"><img width="18" height="18" decoding="async"
-                            src="https://http2.mlstatic.com/frontend-assets/moneyin-hub-frontend/icon-cash.svg"
-                            class="item__image" alt="image list item"></div>
-                    <div class="andes-list__item-text"><span class="andes-list__item-primary">
-                            <div class="item__title">Rapipago y Pago Fácil</div>
-                        </span><span class="andes-list__item-secondary">
-                            <div class="item__value-props"><span class="item__value-props-default">1% por
-                                    transacción</span><span class="item__value-props-default">En hasta 2
-                                    horas</span>
-                            </div>
-                        </span></div>
-                </div>
-                <div class="andes-list__item-second-column">
-                    <div class="andes-list__item-chevron andes-list__item-chevron--top"><svg width="20px" height="20px"
-                            viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                fill-opacity="0.449999988">
-                                <polygon fill="#000000" fill-rule="nonzero"
-                                    transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
-                                    points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
-                                </polygon>
-                            </g>
-                        </svg></div>
-                </div>
-            </div>
+        <h3>1. display: block;</h3>
+
+        <a href="#"  style="display: block;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
         </a>
 
-        <h2>Botones aria-labelledby</h2>
-        <button type="button" aria-labelledby="botones">
-            <div id="botones" aria-hidden="true">
-                <div class="andes-list__item-first-column">
-                    <div class="andes-list__item-asset" aria-hidden="true"><img width="18" height="18" decoding="async"
-                            src="https://http2.mlstatic.com/frontend-assets/moneyin-hub-frontend/icon-cash.svg"
-                            class="item__image" alt="image list item"></div>
-                    <div class="andes-list__item-text"><span class="andes-list__item-primary">
-                            <div class="item__title">Rapipago y Pago Fácil</div>
-                        </span><span class="andes-list__item-secondary">
-                            <div class="item__value-props"><span class="item__value-props-default">1% por
-                                    transacción</span><span class="item__value-props-default">En hasta 2
-                                    horas</span>
-                            </div>
-                        </span></div>
-                </div>
-                <div class="andes-list__item-second-column">
-                    <div class="andes-list__item-chevron andes-list__item-chevron--top"><svg width="20px" height="20px"
-                            viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                fill-opacity="0.449999988">
-                                <polygon fill="#000000" fill-rule="nonzero"
-                                    transform="translate(10.672186, 9.993127) scale(-1, 1) translate(-10.672186, -9.993127)"
-                                    points="13.9160306 5.195 13.0675024 4.34647186 7.42334506 9.99062923 13.0724979 15.639782 13.921026 14.7912539 9.12040134 9.99062923">
-                                </polygon>
-                            </g>
-                        </svg></div>
-                </div>
-            </div>
-        </button>
+        <br /><br />
+
+        <a href="#"  style="display: block;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </a>
+
+        <h3>2. display: inline;</h3>
+
+        <a href="#"  style="display: inline;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </a>
+
+        <br /><br />
+
+        <a href="#"  style="display: inline;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </a>
+
+        <h3>3. display: inline-block;</h3>
+
+        <a href="#"  style="display: inline-block;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </a>
+
+        <br /><br />
+
+        <a href="#"  style="display: inline-block;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </a>
 
 
+        <h3>4. display: flex;</h3>
+
+        <a href="#"  style="display: flex;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </a>
+
+        <br /><br />
+
+        <a href="#"  style="display: flex;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </a>
+
+        <h3>5. display: inline-flex;</h3>
+
+
+        <a href="#"  style="display: inline-flex;">
+            <span class="first" style="display: inline;">Texto 1</span>
+            <span class="second" style="display: inline;">Texto 2</span>
+        </a>
+
+        <br /><br />
+
+        <a href="#"  style="display: inline-flex;">
+            <span class="first" style="display: block;">Texto 1</span>
+            <span class="second" style="display: block;">Texto 2</span>
+        </a>
 
 
     </main>
 
-
     <footer></footer>
-
 </body>
 
 </html>
