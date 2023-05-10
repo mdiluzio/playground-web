@@ -2,105 +2,211 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <title>Botones</title>
+  <meta charset="utf-8">
+  <title>Botones</title>
 </head>
 
 <body>
-    <header>
-        <h1>Botones</h1>
-    </header>
+  <header>
+    <h1>Botones</h1>
+  </header>
 
-    <main id="contenido">
+  <main id="contenido">
 
-        <style>
-            div,
-            span {
-                border: 1px solid black;
-                padding: 5px;
-                margin: 5px;
-            }
-        </style>
-
-
-        <h2>Combinaciones de display en div y childs span</h2>
-
-        <h3>Default</h3>
-        <div>
-            <span>Texto 1</span>
-            <span>Texto 2</span>
-        </div>
-
-        <h3>1. display: block;</h3>
-        <div style="display: block;">
-            <span class="first" style="display: block;">Texto 1</span>
-            <span class="second" style="display: block;">Texto 2</span>
-        </div>
-
-        <br /><br />
-
-        <div style="display: block;">
-            <span class="first" style="display: inline;">Texto 1</span>
-            <span class="second" style="display: inline;">Texto 2</span>
-        </div>
-
-        <h3>2. display: inline;</h3>
-        <div style="display: inline;">
-            <span class="first" style="display: block;">Texto 1</span>
-            <span class="second" style="display: block;">Texto 2</span>
-        </div>
-
-        <br><br>
-
-        <div style="display: inline;">
-            <span class="first" style="display: inline;">Texto 1</span>
-            <span class="second" style="display: inline;">Texto 2</span>
-        </div>
-
-        <h3>3. display: inline-block;</h3>
-        <div style="display: inline-block;">
-            <span class="first" style="display: block;">Texto 1</span>
-            <span class="second" style="display: block;">Texto 2</span>
-        </div>
-
-        <br><br>
-
-        <div style="display: inline-block;">
-            <span class="first" style="display: inline;">Texto 1</span>
-            <span class="second" style="display: inline;">Texto 2</span>
-        </div>
-
-        <h3>4. display: flex;</h3>
-        <div style="display: flex;">
-            <span class="first" style="display: block;">Texto 1</span>
-            <span class="second" style="display: block;">Texto 2</span>
-        </div>
-
-        <br><br>
-
-        <div style="display: flex;">
-            <span class="first" style="display: inline;">Texto 1</span>
-            <span class="second" style="display: inline;">Texto 2</span>
-        </div>
-
-        <h3>5. display: inline-flex;</h3>
-        <div style="display: inline-flex;">
-            <span class="first" style="display: block;">Texto 1</span>
-            <span class="second" style="display: block;">Texto 2</span>
-        </div>
-
-        <br><br>
-
-        <div style="display: inline-flex;">
-            <span class="first" style="display: inline;">Texto 1</span>
-            <span class="second" style="display: inline;">Texto 2</span>
-        </div>
+    <style>
+      div,
+      span {
+        border: 1px solid black;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
 
 
+    <h2>Resultados</h2>
 
-    </main>
+    <table style="width: 100%;" border="1" cellpadding="2">
+      <tbody>
+        <tr>
+          <td></td>
+          <td>NVDA/Chrome</td>
+          <td>NVDA/Firefox</td>
+          <td>Narrator/Edge</td>
+          <td>VO/Mac</td>
+          <td>VO/iPhone</td>
+          <td>Talkback</td>
+        </tr>
+        <tr>
+          <td>Default</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button block | span inline</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button block | span block</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button inline | span inline</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button inline | span block</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button inline-block | span inline</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button inline-block | span block</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button flex | span inline</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button flex | span block</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button inline-flex | span inline</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Button inline-flex | span block</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- DivTable.com -->
 
-    <footer></footer>
+
+
+    <h2>Playground</h2>
+
+    <h3>Default</h3>
+    <div>
+      <span>Texto 1</span>
+      <span>Texto 2</span>
+    </div>
+
+    <h3>1. display: block;</h3>
+    <div style="display: block;">
+      <span class="first" style="display: block;">Texto 1</span>
+      <span class="second" style="display: block;">Texto 2</span>
+    </div>
+
+    <div style="display: block;">
+      <span class="first" style="display: inline;">Texto 1</span>
+      <span class="second" style="display: inline;">Texto 2</span>
+    </div>
+
+    <h3>2. display: inline;</h3>
+    <div style="display: inline;">
+      <span class="first" style="display: block;">Texto 1</span>
+      <span class="second" style="display: block;">Texto 2</span>
+    </div>
+
+    <div style="display: inline;">
+      <span class="first" style="display: inline;">Texto 1</span>
+      <span class="second" style="display: inline;">Texto 2</span>
+    </div>
+
+    <h3>3. display: inline-block;</h3>
+    <div style="display: inline-block;">
+      <span class="first" style="display: block;">Texto 1</span>
+      <span class="second" style="display: block;">Texto 2</span>
+    </div>
+
+    <div style="display: inline-block;">
+      <span class="first" style="display: inline;">Texto 1</span>
+      <span class="second" style="display: inline;">Texto 2</span>
+    </div>
+
+    <h3>4. display: flex;</h3>
+    <div style="display: flex;">
+      <span class="first" style="display: block;">Texto 1</span>
+      <span class="second" style="display: block;">Texto 2</span>
+    </div>
+
+    <div style="display: flex;">
+      <span class="first" style="display: inline;">Texto 1</span>
+      <span class="second" style="display: inline;">Texto 2</span>
+    </div>
+
+    <h3>5. display: inline-flex;</h3>
+    <div style="display: inline-flex;">
+      <span class="first" style="display: block;">Texto 1</span>
+      <span class="second" style="display: block;">Texto 2</span>
+    </div>
+
+    <div style="display: inline-flex;">
+      <span class="first" style="display: inline;">Texto 1</span>
+      <span class="second" style="display: inline;">Texto 2</span>
+    </div>
+
+  </main>
+
+  <footer></footer>
 </body>
 
 </html>

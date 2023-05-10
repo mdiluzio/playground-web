@@ -1,0 +1,68 @@
+<!DOCTYPE html lang="en-EN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money</title>
+  <style>
+    .prueba1 {
+      display: block;
+    }
+
+    .prueba2 {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Accordion</h1>
+  </header>
+
+  <main class="main">
+
+    <div class="accordion-container show-separator">
+      <button class="accordion-title" aria-expanded="false">Ver más
+        <span aria-hidden="true" class="accordion-arrow-container">
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.9943 9.05475L7.99058 3.05101L1.98058 9.06101L0.919922 8.00035L7.99058 0.929688L15.055 7.99409L13.9943 9.05475Z"
+              fill="#3483FA"></path>
+          </svg>
+        </span>
+      </button>
+
+      <style>
+        .accordion-content-wrapper[aria-expanded="true"] {
+          display: block;
+        }
+      </style>
+
+      <script>
+        const triggerButton = document.getElementsByClassName("accordion-title");
+        function load() {
+          triggerButton.addEventListener("click", triggerButton.setAttribute(aria-expanded, false), false);
+        }
+        document.addEventListener("DOMContentLoaded", load, false);
+      </script>
+
+      <div class="accordion-content-wrapper" style="max-height: 0px; padding-bottom: 0px;">
+        <div class="accordion-content">
+          <section>
+            Hola!
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <footer></footer>
+
+</body>
+
+</html>

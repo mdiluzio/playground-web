@@ -24,6 +24,35 @@
 
     <main class="main">
 
+        <div aria-label="hola">Prueba</div>
+        <div aria-label>Prueba 2</div>
+
+        <h2>Pruwba colspan andes</h2>
+
+        <table class="andes-table">
+            <thead class="andes-table__head">
+                <tr class="andes-table__row">
+                    <th class="andes-table__header andes-table__header--left">Herramienta</th>
+                    <th class="andes-table__header andes-table__header--left">Datos</th>
+                    <th class="andes-table__header andes-table__header--right">Otra cosa</th>
+                </tr>
+            </thead>
+            <tbody class="andes-table__body">
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left" data-title="Fecha" colspan="3"><span
+                            class="andes-table__column--value">07/04/2021</span></td>
+                </tr>
+                <tr class="andes-table__row" rowspan="">
+                    <td class="andes-table__column andes-table__column--left" data-title="Fecha"><span
+                            class="andes-table__column--value">07/04/2021</span></td>
+                    <td class="andes-table__column andes-table__column--left" data-title="Número de Operación"><span
+                            class="andes-table__column--value">0000-3432</span></td>
+                    <td class="andes-table__column andes-table__column--right" data-title="Importe"><span
+                            class="andes-table__column--value">$3000</span></td>
+                </tr>
+            </tbody>
+        </table>
+
         <h2>Original</h2>
 
         <table class="andes-table">
@@ -198,16 +227,15 @@
                 <tr class="andes-table__row">
                     <th class="andes-table__header andes-table__header--left andes-table__header--sortable" scope="col">
                         <div class="andes-table__header__container"><button>Fecha
-                            <div class="andes-table__sort-icon-container"
-                                aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"
-                                    fill="rgba(0, 0, 0, 0.9)">
-                                    <path
-                                        d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
-                                        fill="rgba(0, 0, 0, 0.9)"></path>
-                                    <path
-                                        d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
-                                        fill="rgba(0, 0, 0, 0.9)"></path>
-                                </svg></div>
+                                <div class="andes-table__sort-icon-container" aria-hidden="true"><svg width="16"
+                                        height="16" viewBox="0 0 16 16" fill="rgba(0, 0, 0, 0.9)">
+                                        <path
+                                            d="M14.8434 4.40769L13.9949 5.25622L12.1999 3.46122V13.9925H10.9999V3.43722L9.18992 5.24722L8.34139 4.39869L11.5879 1.15216L14.8434 4.40769Z"
+                                            fill="rgba(0, 0, 0, 0.9)"></path>
+                                        <path
+                                            d="M7.65245 11.5996L6.80392 10.7511L5.00892 12.5461V1.93488H3.80892V12.5701L1.99892 10.7601L1.15039 11.6086L4.39692 14.8551L7.65245 11.5996Z"
+                                            fill="rgba(0, 0, 0, 0.9)"></path>
+                                    </svg></div>
                             </button>
                         </div>
                     </th>
